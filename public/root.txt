@@ -1,0 +1,89 @@
+dsrt-ai/
+├── package.json                    (workspace root)
+├── tsconfig.base.json
+├── README.md
+├── client/
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── vite.config.ts
+│   ├── index.html
+│   └── src/
+│       ├── main.tsx
+│       ├── App.tsx
+│       ├── vite-env.d.ts
+│       ├── types/index.ts
+│       ├── data/
+│       │   ├── providers.ts
+│       │   ├── scenarios.ts
+│       │   ├── routes.ts
+│       │   ├── industries.ts
+│       │   └── assets.ts
+│       ├── lib/
+│       │   ├── utils.ts
+│       │   └── icons.tsx
+│       ├── context/AppContext.tsx
+│       ├── hooks/
+│       │   ├── useScroll.ts
+│       │   ├── useReveal.ts
+│       │   ├── useToast.ts
+│       │   └── useSystemAnimation.ts
+│       ├── components/
+│       │   ├── common/
+│       │   │   ├── Toast.tsx
+│       │   │   ├── IconSlot.tsx
+│       │   │   ├── ProviderIcon.tsx
+│       │   │   ├── Reveal.tsx
+│       │   │   ├── DsrtLogo.tsx
+│       │   │   └── SectionImage.tsx
+│       │   ├── layout/
+│       │   │   ├── Nav.tsx
+│       │   │   ├── PageDots.tsx
+│       │   │   └── Footer.tsx
+│       │   ├── hero/
+│       │   │   ├── HeroSection.tsx
+│       │   │   └── CtaBand.tsx
+│       │   ├── dashboard/
+│       │   │   ├── DashboardWindow.tsx
+│       │   │   ├── Sidebar.tsx
+│       │   │   ├── SettingsRow.tsx
+│       │   │   ├── ComparisonHeader.tsx
+│       │   │   ├── ComparisonGrid.tsx
+│       │   │   ├── PanelColumn.tsx
+│       │   │   ├── PromptComposer.tsx
+│       │   │   ├── RouteDropdown.tsx
+│       │   │   └── ProviderDropdown.tsx
+│       │   ├── story/
+│       │   │   ├── ManifestoSection.tsx
+│       │   │   ├── BuildSection.tsx
+│       │   │   └── DescPage.tsx
+│       │   ├── system/
+│       │   │   ├── SystemSection.tsx
+│       │   │   ├── SystemBoard.tsx
+│       │   │   ├── StageRail.tsx
+│       │   │   └── LiveFeed.tsx
+│       │   ├── industries/IndustriesSection.tsx
+│       │   └── providers/ProvidersMarquee.tsx
+│       └── styles/
+│           ├── globals.css
+│           ├── nav.css
+│           ├── hero.css
+│           ├── dashboard.css
+│           ├── story.css
+│           ├── system.css
+│           ├── industries.css
+│           ├── providers.css
+│           ├── footer.css
+│           └── toast.css
+└── server/
+    ├── package.json
+    ├── tsconfig.json
+    └── src/
+        ├── index.ts
+        ├── routes/
+        │   ├── scenarios.ts
+        │   ├── providers.ts
+        │   ├── comparison.ts
+        │   └── health.ts
+        ├── services/
+        │   └── metricsService.ts
+        └── types.ts
