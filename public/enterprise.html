@@ -2403,6 +2403,13 @@
         width: 100%;
       }
     }
+    .brand__logo {
+    height: 38px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    display: block;
+}
   </style>
   <link rel="stylesheet" href="assets/css/professional.css">
   <link rel="stylesheet" href="assets/css/enterprise-enhancements.css">
@@ -2415,13 +2422,14 @@
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="/enterprise" class="brand" aria-label="DSRT AI Enterprise">
-        <span class="brand__mark" aria-hidden="true">
-          <span></span><span></span><span></span><span></span>
-        </span>
-        <span>DSRT AI</span>
-        <span class="brand__divider">/</span>
-        <span class="brand__route">ENTERPRISE</span>
-      </a>
+    <img
+        src="/assets/dsrt-logo.png"
+        alt="DSRT AI Logo"
+        class="brand__logo"
+    />
+    <span class="brand__divider">/</span>
+    <span class="brand__route">ENTERPRISE</span>
+</a>
 
       <nav class="site-nav" aria-label="Primary Navigation">
         <a href="#proposition" class="site-nav__link">Proposition</a>
