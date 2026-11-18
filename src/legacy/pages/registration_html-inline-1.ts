@@ -1,10 +1,10 @@
-// @ts-nocheck
+﻿// @ts-nocheck
 /* =====================================================================
-   DSRT AI — REGISTRATION CLIENT LOGIC
+   DSRT AI â€” REGISTRATION CLIENT LOGIC
    ===================================================================== */
 
-const SUPABASE_PROJECT_REF = "qkxksaxywielazbiifpu";
-const SUPABASE_ANON_KEY    = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFreGtzYXh5d2llbGF6YmlpZnB1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTQyODgzMDUsImV4cCI6MjEwOTg2NDMwNX0.qCxf11bacHH4NVBSn-3daZhYXUssnhaQe7D4QMltVKA";
+const SUPABASE_PROJECT_REF = "kwswedsqozbzylbtsnkm";
+const SUPABASE_ANON_KEY = "sb_publishable_FP3gkUvVfiBZsDL3HGQCSQ_1aWPT66D";
 
 // Fixed: Correct string interpolation for the endpoint
 const ENDPOINT = "https://" + SUPABASE_PROJECT_REF + ".supabase.co/functions/v1/submit-application";
@@ -56,7 +56,7 @@ const PLANNING_FUNCTIONS = [
 ];
 
 /* =====================================================================
-   COUNTRIES — India first, then all others alphabetically
+   COUNTRIES â€” India first, then all others alphabetically
    ===================================================================== */
 
 const COUNTRIES = [
@@ -148,10 +148,10 @@ function getChipValues(name) {
 let currentStep = 1;
 const totalSteps = 4;
 const STEP_LABELS = {
-  1: "Step 01 of 04 — Organization Details",
-  2: "Step 02 of 04 — Authorized Contact",
-  3: "Step 03 of 04 — AI Infrastructure & Usage",
-  4: "Step 04 of 04 — Early Access & Participation",
+  1: "Step 01 of 04 â€” Organization Details",
+  2: "Step 02 of 04 â€” Authorized Contact",
+  3: "Step 03 of 04 â€” AI Infrastructure & Usage",
+  4: "Step 04 of 04 â€” Early Access & Participation",
 };
 
 function showStep(n) {
@@ -268,8 +268,6 @@ async function submitForm(e) {
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span> Submitting...';
 
-  const captchaToken = window.hcaptcha ? hcaptcha.getResponse() : "";
-
   const payload = {
     company: {
       company_name: document.getElementById("f_company").value.trim(),
@@ -322,7 +320,6 @@ async function submitForm(e) {
       privacy_consent: document.getElementById("consent_privacy").checked,
       marketing_consent: document.getElementById("consent_marketing").checked,
     },
-    captcha_token: captchaToken,
     meta: getMeta(),
   };
 
@@ -348,7 +345,6 @@ async function submitForm(e) {
   } finally {
     btn.disabled = false;
     btn.innerHTML = original;
-    if (window.hcaptcha) hcaptcha.reset();
   }
 }
 
@@ -367,3 +363,5 @@ document.addEventListener("DOMContentLoaded", () => {
   wireNav();
   document.getElementById("dsrtForm").addEventListener("submit", submitForm);
 });
+
+
