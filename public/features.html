@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DSRT AI — Intelligence Amplification</title>
+  <title>DSRT AI — Features & Capabilities</title>
+<meta name="description" content="Explore DSRT AI amplification, multi-model access, performance measurement, Work Mode, War Mode, and enterprise AI capabilities.">
 
   <!-- Fonts: Orbitron (robotic) + Inter (clean Palantir-style body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -161,7 +162,7 @@
     ============================================ */
     .hero {
       position: relative;
-      /* 👇 YOUR BACKGROUND IMAGE PLACEHOLDER */
+      /* ðŸ‘‡ YOUR BACKGROUND IMAGE PLACEHOLDER */
       background-image: url("assets/images/hero-bg.jpg");
       background-size: cover;
       background-position: center;
@@ -357,21 +358,603 @@
     }
   </style>
   <link rel="stylesheet" href="assets/css/professional.css">
+
+<style>
+/* ===== DSRT FEATURES REDESIGN ===== */
+.features-page {
+  --f-ink: #17202b;
+  --f-muted: #697586;
+  --f-line: #e2e7ed;
+  --f-blue: #356fe0;
+  background: #fff;
+  color: var(--f-ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.features-page a { text-decoration: none; }
+.features-page .container { max-width: 1320px; }
+.features-page .site-header { padding-top: 28px; }
+.features-page .feature-hero { background: linear-gradient(135deg,#f8fafc 0%,#f1f5fa 65%,#eaf1fa 100%); }
+.features-page .feature-hero-inner { padding-top: clamp(80px,10vw,150px); padding-bottom: 48px; }
+.features-page .eyebrow,.features-page .section-kicker {
+  font-size: 11px; letter-spacing: .16em; font-weight: 700; color: #66758a;
+}
+.features-page .eyebrow { display:flex; align-items:center; gap:10px; margin-bottom:28px; }
+.features-page .eyebrow-dot { width:7px;height:7px;background:#3975e7;border-radius:50%; }
+.features-page .feature-hero h1 {
+  font-size: clamp(48px,7.7vw,108px); line-height:1.02; letter-spacing:-.065em;
+  font-weight:500; max-width:1100px; color:#17202b;
+}
+.features-page .feature-hero h1 span { color:#5278ad; }
+.features-page .feature-hero-description { margin-top:28px; max-width:660px; font-size:18px; line-height:1.75; color:#637084; }
+.features-page .feature-hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+.features-page .feature-btn { display:inline-flex; gap:28px; align-items:center; justify-content:space-between; padding:15px 20px; font-size:14px; font-weight:600; border:1px solid #d7dee7; transition: .2s ease; }
+.features-page .feature-btn-primary { background:#17202b; color:white; border-color:#17202b; }
+.features-page .feature-btn-primary:hover { background:#2f5ea9; border-color:#2f5ea9; transform:translateY(-2px); }
+.features-page .feature-btn-secondary { background:transparent; color:#17202b; }
+.features-page .feature-btn-secondary:hover { background:#fff; }
+.features-page .hero-meta { display:flex; justify-content:space-between; border-top:1px solid #d8e0e9; margin-top:90px; padding-top:18px; font-size:10px; letter-spacing:.12em; color:#78869a; }
+
+.features-page .feature-section { padding:clamp(72px,9vw,130px) 0; }
+.features-page .section-topline { display:flex; justify-content:space-between; gap:20px; border-bottom:1px solid var(--f-line); padding-bottom:16px; font-size:10px; letter-spacing:.13em; color:#778498; }
+.features-page .section-intro { display:grid; grid-template-columns:1.1fr .7fr; gap:50px; align-items:end; margin:65px 0 55px; }
+.features-page .section-intro h2,.features-page .split-heading h2,.features-page .models-layout h2,.features-page .enterprise-layout h2 {
+  font-size:clamp(38px,5.5vw,72px); line-height:1.08; letter-spacing:-.055em; font-weight:500; max-width:800px;
+}
+.features-page .section-intro p,.features-page .large-copy { color:var(--f-muted); font-size:17px; line-height:1.75; max-width:620px; }
+.features-page .capability-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--f-line); }
+.features-page .capability-card { min-height:260px; padding:26px; border-right:1px solid var(--f-line); transition:background .25s, transform .25s; }
+.features-page .capability-card:last-child { border-right:0; }
+.features-page .capability-card:hover { background:#f7f9fc; transform:translateY(-3px); }
+.features-page .card-number { font-size:10px; letter-spacing:.12em; color:#8591a1; }
+.features-page .cap-icon { margin:42px 0 20px; font-size:26px; color:#376ed0; }
+.features-page .capability-card h3 { font-size:19px; font-weight:600; letter-spacing:-.02em; }
+.features-page .capability-card p { color:#748092; font-size:14px; line-height:1.7; margin-top:12px; }
+
+.features-page .split-layout,.features-page .models-layout,.features-page .enterprise-layout { display:grid; grid-template-columns:1fr 1fr; gap:70px; margin-top:65px; }
+.features-page .split-heading h2,.features-page .models-layout h2,.features-page .enterprise-layout h2 { margin-top:20px; }
+.features-page .feature-list { margin:38px 0; border-top:1px solid var(--f-line); }
+.features-page .feature-list div { display:flex; gap:22px; align-items:center; padding:17px 0; border-bottom:1px solid var(--f-line); }
+.features-page .feature-list span,.features-page .mini-feature>span,.features-page .enterprise-list span { color:#8994a4; font-size:10px; letter-spacing:.1em; }
+.features-page .feature-list strong { font-size:14px; font-weight:500; }
+.features-page .feature-text-link { display:inline-flex; gap:12px; align-items:center; margin-top:26px; font-size:14px; font-weight:600; color:#1c2b3e; border-bottom:1px solid #aeb8c6; padding-bottom:8px; }
+.features-page .feature-text-link span { color:#386ed0; transition:transform .2s; }
+.features-page .feature-text-link:hover span { transform:translateX(4px); }
+
+.features-page .workmode-section { background:#f6f8fb; }
+.features-page .workmode-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:42px; align-items:start; }
+.features-page .workspace-visual { border:1px solid #dce3ec; background:#fff; box-shadow:0 20px 60px rgba(26,43,67,.06); }
+.features-page .workspace-top { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #e6ebf1; padding:18px 20px; }
+.features-page .workspace-logo { font-size:13px; font-weight:700; letter-spacing:.08em; }
+.features-page .workspace-logo b { color:#3972d5; }
+.features-page .workspace-status,.features-page .ws-label { font-size:9px; letter-spacing:.12em; color:#8b97a7; }
+.features-page .workspace-body { display:grid; grid-template-columns:150px 1fr; min-height:350px; }
+.features-page .workspace-sidebar { background:#f7f9fc; padding:22px 12px; border-right:1px solid #e5ebf2; }
+.features-page .ws-label { display:block; margin-bottom:16px; }
+.features-page .ws-item { font-size:11px; padding:11px 8px; color:#758296; margin-bottom:5px; }
+.features-page .ws-item.selected { background:#e9f0fb; color:#315e9d; }
+.features-page .workspace-chat { padding:22px 18px; position:relative; }
+.features-page .ws-message { font-size:11px; line-height:1.65; padding:12px; border:1px solid #e5ebf1; margin:16px 0; color:#667487; }
+.features-page .ws-user { background:#f6f8fb; }
+.features-page .ws-ai { background:#fff; }
+.features-page .ws-ai-label { font-size:9px; letter-spacing:.1em; color:#3c70c8; font-weight:700; }
+.features-page .ws-input { border:1px solid #e3e9f0; padding:12px; color:#9aa5b3; font-size:11px; margin-top:45px; }
+.features-page .ws-input span { float:right; background:#1b2634; color:white; padding:2px 7px; }
+.features-page .workmode-features { border-top:1px solid #dce3ec; }
+.features-page .mini-feature { padding:18px 0; border-bottom:1px solid #dce3ec; }
+.features-page .mini-feature h3 { font-size:15px; font-weight:600; margin:8px 0; }
+.features-page .mini-feature p { font-size:13px; line-height:1.6; color:#788598; }
+
+.features-page .comparison-panel { border:1px solid var(--f-line); margin-top:50px; }
+.features-page .comparison-header { display:flex; justify-content:space-between; align-items:center; padding:25px; border-bottom:1px solid var(--f-line); }
+.features-page .comparison-label,.features-page .comparison-type { font-size:10px; letter-spacing:.12em; color:#8793a4; }
+.features-page .comparison-header h3 { font-size:20px; font-weight:500; margin-top:8px; }
+.features-page .comparison-badge { font-size:10px; border:1px solid var(--f-line); padding:9px 12px; letter-spacing:.08em; }
+.features-page .comparison-columns { display:grid; grid-template-columns:1fr 1fr; }
+.features-page .comparison-column { padding:30px; border-right:1px solid var(--f-line); }
+.features-page .comparison-column:last-child { border-right:0; }
+.features-page .comparison-column.amplified { background:#f6f9fd; }
+.features-page .comparison-column h3 { font-size:26px; font-weight:500; margin:14px 0 8px; }
+.features-page .comparison-column p { color:#758194; font-size:13px; }
+.features-page .comparison-placeholder { border:1px solid #e3e8ef; padding:20px; margin-top:28px; background:white; }
+.features-page .placeholder-line { height:7px; background:#e9edf3; margin:10px 0; width:78%; }
+.features-page .placeholder-line.long { width:100%; }
+.features-page .placeholder-line.short { width:48%; }
+.features-page .comparison-metrics { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--f-line); }
+.features-page .comparison-metrics div { padding:20px; border-right:1px solid var(--f-line); }
+.features-page .comparison-metrics div:last-child { border-right:0; }
+.features-page .comparison-metrics span { display:block; font-size:9px; letter-spacing:.12em; color:#8a96a6; }
+.features-page .comparison-metrics strong { display:block; font-size:13px; font-weight:500; margin-top:9px; }
+
+.features-page .provider-grid { display:grid; grid-template-columns:1fr 1fr; margin-top:36px; border:1px solid var(--f-line); }
+.features-page .provider-card { padding:20px; border-right:1px solid var(--f-line); border-bottom:1px solid var(--f-line); }
+.features-page .provider-card:nth-child(2n) { border-right:0; }
+.features-page .provider-card:nth-last-child(-n+2) { border-bottom:0; }
+.features-page .provider-card span { font-size:9px; color:#8a96a6; letter-spacing:.12em; }
+.features-page .provider-card strong { display:block; font-size:14px; margin:12px 0 8px; }
+.features-page .provider-card p { color:#798597; font-size:12px; }
+
+.features-page .metrics-grid { display:grid; grid-template-columns:repeat(5,1fr); border:1px solid var(--f-line); margin-top:48px; }
+.features-page .metric-card { padding:22px; border-right:1px solid var(--f-line); min-height:220px; }
+.features-page .metric-card:last-child { border-right:0; }
+.features-page .metric-index { font-size:10px; color:#8793a3; }
+.features-page .metric-symbol { color:#3971d4; font-size:25px; margin:35px 0 18px; }
+.features-page .metric-card h3 { font-size:15px; font-weight:600; }
+.features-page .metric-card p { color:#788496; font-size:12px; line-height:1.65; margin-top:10px; }
+
+.features-page .enterprise-list { margin-top:35px; border-top:1px solid var(--f-line); }
+.features-page .enterprise-list div { padding:18px 0; border-bottom:1px solid var(--f-line); }
+.features-page .enterprise-list span { display:inline-block; margin-right:16px; }
+.features-page .enterprise-list strong { font-size:14px; font-weight:600; }
+.features-page .enterprise-list p { color:#788496; font-size:12px; margin:8px 0 0 30px; }
+
+.features-page .process-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--f-line); margin-top:48px; }
+.features-page .process-grid article { padding:25px; border-right:1px solid var(--f-line); min-height:240px; }
+.features-page .process-grid article:last-child { border-right:0; }
+.features-page .process-number { font-size:10px; color:#8793a3; }
+.features-page .process-icon { font-size:26px; color:#3972d5; margin:38px 0 16px; }
+.features-page .process-grid h3 { font-size:16px; font-weight:600; }
+.features-page .process-grid p { font-size:13px; line-height:1.65; color:#788496; margin-top:10px; }
+
+.features-page .feature-final-cta { background:#17202b; color:#fff; padding:clamp(70px,9vw,120px) 0; }
+.features-page .feature-final-cta .section-topline { border-color:#344251; color:#95a3b4; }
+.features-page .feature-final-cta h2 { font-size:clamp(44px,7vw,88px); line-height:1.05; letter-spacing:-.06em; font-weight:500; margin-top:65px; }
+.features-page .feature-final-cta h2 span { color:#9ab8e7; }
+.features-page .feature-final-cta p { color:#a6b1bf; font-size:16px; margin-top:25px; }
+.features-page .feature-final-cta .feature-btn-primary { background:#fff; border-color:#fff; color:#17202b; }
+.features-page .feature-final-cta .feature-btn-primary:hover { background:#dce8f8; }
+.features-page .feature-final-cta .feature-btn-secondary { color:#fff; border-color:#566271; }
+.features-page .feature-final-cta .feature-btn-secondary:hover { background:#263443; }
+
+/* Responsive */
+@media(max-width:1000px) {
+  .features-page .capability-grid { grid-template-columns:repeat(2,1fr); }
+  .features-page .capability-card:nth-child(2) { border-right:0; }
+  .features-page .capability-card:nth-child(-n+2) { border-bottom:1px solid var(--f-line); }
+  .features-page .split-layout,.features-page .models-layout,.features-page .enterprise-layout { grid-template-columns:1fr; gap:35px; }
+  .features-page .workmode-grid { grid-template-columns:1fr; }
+  .features-page .metrics-grid { grid-template-columns:repeat(2,1fr); }
+  .features-page .metric-card { border-bottom:1px solid var(--f-line); }
+  .features-page .metric-card:nth-child(2n) { border-right:0; }
+  .features-page .metric-card:last-child { border-bottom:0; }
+  .features-page .process-grid { grid-template-columns:repeat(2,1fr); }
+  .features-page .process-grid article:nth-child(2) { border-right:0; }
+  .features-page .process-grid article:nth-child(-n+2) { border-bottom:1px solid var(--f-line); }
+}
+@media(max-width:700px) {
+  .features-page .feature-hero-inner { padding-top:70px; }
+  .features-page .feature-hero h1 { font-size:clamp(42px,12vw,68px); }
+  .features-page .feature-hero-description { font-size:16px; }
+  .features-page .hero-meta { margin-top:55px; }
+  .features-page .section-intro { grid-template-columns:1fr; gap:22px; margin:45px 0 35px; }
+  .features-page .section-intro h2,.features-page .split-heading h2,.features-page .models-layout h2,.features-page .enterprise-layout h2 { font-size:clamp(38px,10vw,56px); }
+  .features-page .capability-grid { grid-template-columns:1fr; }
+  .features-page .capability-card { border-right:0; border-bottom:1px solid var(--f-line); min-height:220px; }
+  .features-page .capability-card:last-child { border-bottom:0; }
+  .features-page .cap-icon { margin:25px 0 16px; }
+  .features-page .workspace-body { grid-template-columns:100px 1fr; min-height:300px; }
+  .features-page .workspace-sidebar { padding:14px 7px; }
+  .features-page .workspace-chat { padding:14px 10px; }
+  .features-page .ws-message { padding:9px; font-size:10px; }
+  .features-page .comparison-header { align-items:flex-start; flex-direction:column; gap:15px; }
+  .features-page .comparison-columns { grid-template-columns:1fr; }
+  .features-page .comparison-column { border-right:0; border-bottom:1px solid var(--f-line); padding:22px; }
+  .features-page .comparison-column:last-child { border-bottom:0; }
+  .features-page .comparison-metrics { grid-template-columns:1fr 1fr; }
+  .features-page .comparison-metrics div:nth-child(2n) { border-right:0; }
+  .features-page .comparison-metrics div { border-bottom:1px solid var(--f-line); }
+  .features-page .comparison-metrics div:nth-last-child(-n+2) { border-bottom:0; }
+  .features-page .provider-grid { grid-template-columns:1fr; }
+  .features-page .provider-card,.features-page .provider-card:nth-child(2n) { border-right:0; border-bottom:1px solid var(--f-line); }
+  .features-page .provider-card:last-child { border-bottom:0; }
+  .features-page .metrics-grid { grid-template-columns:1fr; }
+  .features-page .metric-card { border-right:0; border-bottom:1px solid var(--f-line); min-height:auto; }
+  .features-page .metric-card:last-child { border-bottom:0; }
+  .features-page .metric-symbol { margin:22px 0 12px; }
+  .features-page .process-grid { grid-template-columns:1fr; }
+  .features-page .process-grid article { border-right:0; border-bottom:1px solid var(--f-line); min-height:auto; }
+  .features-page .process-grid article:last-child { border-bottom:0; }
+  .features-page .process-icon { margin:25px 0 14px; }
+  .features-page .feature-final-cta h2 { margin-top:45px; }
+  .features-page .feature-btn { width:100%; }
+}
+</style>
+
+<style>
+/* FEATURES NAVBAR FIX */
+.features-page .site-header {
+  position: relative;
+  z-index: 50;
+  padding-top: 24px;
+}
+
+.features-page .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.features-page .logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.features-page .logo img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.features-page .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.features-page .header-actions .btn-outline {
+  min-width: 150px;
+  height: 42px;
+  padding: 0 20px;
+  background: #17202b;
+  color: #fff;
+  border: 1px solid #17202b;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all .2s ease;
+}
+
+.features-page .header-actions .btn-outline:hover {
+  background: #356fe0;
+  border-color: #356fe0;
+}
+
+.features-page .icon-group {
+  border: 1px solid #dfe5ec;
+  background: rgba(255,255,255,.85);
+}
+
+.features-page .icon-btn {
+  color: #17202b;
+  width: 42px;
+  height: 40px;
+}
+
+.features-page .icon-btn:hover {
+  background: #edf3fb;
+}
+
+.features-page .header-nav {
+  margin-top: 22px;
+  border-top: 1px solid #e4e9ef;
+}
+
+.features-page .header-nav::before {
+  display: none;
+}
+
+.features-page .header-nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 32px;
+  padding-top: 15px;
+}
+
+.features-page .header-nav li {
+  margin: 0;
+}
+
+.features-page .header-nav a {
+  position: relative;
+  padding: 5px 0;
+  color: #687587;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+
+.features-page .header-nav a:hover,
+.features-page .header-nav a.active {
+  color: #17202b;
+}
+
+.features-page .header-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #356fe0;
+}
+
+.features-page .header-nav .chev {
+  width: 12px;
+  height: 12px;
+  margin-left: 2px;
+}
+
+@media (max-width: 900px) {
+  .features-page .header-nav ul {
+    gap: 8px 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .features-page .site-header {
+    padding-top: 18px;
+  }
+
+  .features-page .header-nav {
+    display: none;
+  }
+
+  .features-page .header-actions {
+    gap: 8px;
+  }
+
+  .features-page .header-actions .btn-outline {
+    min-width: auto;
+    height: 38px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .features-page .icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+</style>
+
+<style>
+/* FEATURES HEADER - SINGLE ROW ALIGNMENT */
+.features-page .site-header {
+  position: relative;
+  padding: 14px 0;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 100;
+}
+
+.features-page .header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 52px;
+}
+
+.features-page .logo img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation alignment */
+.features-page .header-nav {
+  margin: 0;
+  border: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.features-page .header-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.features-page .header-nav li {
+  margin: 0;
+  list-style: none;
+}
+
+.features-page .header-nav a {
+  color: #555e68;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+.features-page .header-nav a:hover,
+.features-page .header-nav a.active {
+  color: #111827;
+}
+
+/* Right-side actions */
+.features-page .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.features-page .header-actions .btn-outline {
+  height: 46px;
+  min-width: 128px;
+  padding: 0 24px;
+  border-radius: 8px;
+  background: #101412;
+  color: #fff;
+  border: 1px solid #101412;
+}
+
+.features-page .icon-group {
+  border: none;
+  background: transparent;
+}
+
+.features-page .icon-btn {
+  display: none;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .features-page .header-nav ul {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .features-page .site-header {
+    padding: 12px 0;
+  }
+
+  .features-page .header-nav {
+    display: none;
+  }
+
+  .features-page .header-top {
+    min-height: 44px;
+  }
+
+  .features-page .logo img {
+    height: 36px;
+  }
+
+  .features-page .header-actions .btn-outline {
+    min-width: 110px;
+    height: 40px;
+    padding: 0 16px;
+  }
+
+  .features-page .icon-btn {
+    display: inline-flex;
+  }
+}
+</style>
+
+<style>
+/* STICKY NAVBAR - DARK ON SCROLL */
+.features-page .site-header {
+  position: sticky !important;
+  top: 0;
+  z-index: 9999;
+  background: #ffffff;
+  transition: background-color .3s ease, box-shadow .3s ease;
+}
+
+.features-page .site-header.scrolled {
+  background: #000000 !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,.12);
+}
+
+.features-page .site-header.scrolled .header-nav a,
+.features-page .site-header.scrolled .header-nav li,
+.features-page .site-header.scrolled .header-actions,
+.features-page .site-header.scrolled .header-actions button {
+  color: #ffffff !important;
+}
+
+.features-page .site-header.scrolled .header-nav a:hover {
+  color: #cccccc !important;
+}
+
+.features-page .site-header.scrolled .header-nav a.active::after {
+  background: #ffffff !important;
+}
+
+.features-page .site-header.scrolled .header-actions .btn-outline {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.5) !important;
+}
+
+.features-page .site-header.scrolled .icon-group {
+  background: transparent !important;
+  border-color: rgba(255,255,255,.2) !important;
+}
+
+.features-page .site-header.scrolled .icon-btn {
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,.2) !important;
+}
+
+.features-page .site-header.scrolled .icon-btn:hover {
+  background: #222222 !important;
+}
+</style>
+
+<style>
+/* MOVE DSRT AI NEXT TO LOGO */
+.features-page .header-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.features-page .logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* Remove DSRT AI from navigation position if it is a nav item */
+.features-page .header-nav ul li:first-child {
+  display: none !important;
+}
+</style>
+
+<style>
+/* DSRT BRAND NAME BESIDE LOGO */
+.features-page .logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.features-page .brand-name {
+  display: inline-block !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  letter-spacing: -.3px;
+  white-space: nowrap;
+}
+
+.features-page .logo img {
+  display: block;
+}
+
+/* Keep navbar links centered after removing brand link */
+.features-page .header-nav ul {
+  justify-content: center;
+}
+</style>
+
+<style>
+/* DSRT AI BRAND COLOR STATE FIX */
+.features-page .site-header .brand-name {
+  color: #111111 !important;
+  transition: color .3s ease !important;
+}
+
+.features-page .site-header.scrolled .brand-name {
+  color: #ffffff !important;
+}
+</style>
 </head>
 <body>
 
   <!-- ============ HERO (with custom background) ============ -->
-  <section class="hero">
-
-    <!-- HEADER -->
-    <header class="site-header">
+  <section class="features-page">
+<header class="site-header">
       <div class="container">
         <div class="header-top">
           <a href="index.html" class="logo" id="logo">
-            <!-- 👇 LOGO PLACEHOLDER -->
+            <!-- ðŸ‘‡ LOGO PLACEHOLDER -->
             <img src="assets/logo/dsrt-logo.png" alt="DSRT AI"
                  onerror="this.parentElement.classList.add('no-img')" />
-            <span class="logo-fallback">DSRT</span>
+            <span class="logo-fallback">DSRT</span><span class="brand-name">DSRT AI</span>
           </a>
 
           <div class="header-actions">
@@ -393,7 +976,7 @@
 
         <nav class="header-nav">
           <ul>
-            <li><a href="index.html" class="active">Dsrt AI</a></li>
+            
             <li><a href="learn.html">Amplification Technology</a></li>
             <li><a href="solutions.html">Industries
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m5 9 7 7 7-7"/></svg></a></li>
@@ -407,67 +990,268 @@
       </div>
     </header>
 
-    <!-- BIG ROBOTIC TITLE -->
-    <div class="container hero-title-wrap">
-      <h1 class="hero-title reveal">Dsrt AI</h1>
+<!-- FEATURE HERO -->
+<section class="feature-hero">
+  <div class="container feature-hero-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> DSRT AI PLATFORM</div>
+    <h1>More Capability.<br><span>Greater Control.</span><br>Measurable Results.</h1>
+    <p class="feature-hero-description">
+      A unified AI platform designed to amplify intelligence, improve execution,
+      and make AI performance measurable across your workflows.
+    </p>
+    <div class="feature-hero-actions">
+      <a href="#platform-overview" class="feature-btn feature-btn-primary">Explore Features <span>↗</span></a>
+      <a href="registration.html" class="feature-btn feature-btn-secondary">Try DSRT AI <span>↗</span></a>
+    </div>
+    <div class="hero-meta">
+      <span>INTELLIGENCE AMPLIFICATION</span>
+      <span>01 — PLATFORM</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 01: PLATFORM OVERVIEW -->
+<section class="feature-section overview-section" id="platform-overview">
+  <div class="container">
+    <div class="section-topline"><span>01 / PLATFORM OVERVIEW</span><span>CORE CAPABILITIES</span></div>
+    <div class="section-intro">
+      <h2>Built for the Way<br>You Work With AI.</h2>
+      <p>DSRT AI brings amplification, multi-model access, performance measurement, and integrated workflows together in one platform.</p>
     </div>
 
-    <!-- CONTAINED HERO IMAGE (not edge-to-edge) -->
-    <div class="container">
-      <div class="hero-media media-frame reveal">
-        <!-- 👇 HERO FEATURE IMAGE PLACEHOLDER -->
-        <img src="assets/images/hero-feature.png" alt="DSRT AI platform overview"
-             onerror="this.parentElement.classList.add('no-img')" />
-        <div class="ph">
-          <div>Hero Feature Image<code>assets/images/hero-feature.png</code></div>
+    <div class="capability-grid">
+      <article class="capability-card">
+        <span class="card-number">01</span>
+        <div class="cap-icon">↗</div>
+        <h3>LLM Amplification</h3>
+        <p>Enhance AI execution through task-aware processing and efficiency-focused optimization.</p>
+      </article>
+      <article class="capability-card">
+        <span class="card-number">02</span>
+        <div class="cap-icon">◎</div>
+        <h3>Multi-Model Access</h3>
+        <p>Work across different AI models and providers within a unified environment.</p>
+      </article>
+      <article class="capability-card">
+        <span class="card-number">03</span>
+        <div class="cap-icon">⌁</div>
+        <h3>Performance Measurement</h3>
+        <p>Evaluate execution through usage, cost, processing time, and response quality.</p>
+      </article>
+      <article class="capability-card">
+        <span class="card-number">04</span>
+        <div class="cap-icon">⊞</div>
+        <h3>Integrated Workflows</h3>
+        <p>Connect AI capabilities into a practical and consistent workspace.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 02: AMPLIFICATION -->
+<section class="feature-section amplification-section">
+  <div class="container">
+    <div class="section-topline"><span>02 / LLM AMPLIFICATION</span><span>EXECUTION INTELLIGENCE</span></div>
+    <div class="split-layout">
+      <div class="split-heading">
+        <span class="section-kicker">INTELLIGENCE, AMPLIFIED</span>
+        <h2>Make Better Use of Every AI Interaction.</h2>
+      </div>
+      <div class="split-content">
+        <p class="large-copy">DSRT AI is designed to improve how tasks are processed, executed, and evaluated—helping you get more value from every AI interaction.</p>
+        <div class="feature-list">
+          <div><span>01</span><strong>Task-aware execution</strong></div>
+          <div><span>02</span><strong>Efficiency optimization</strong></div>
+          <div><span>03</span><strong>Quality-oriented processing</strong></div>
+          <div><span>04</span><strong>Performance evaluation</strong></div>
         </div>
+        <a class="feature-text-link" href="learn.html">Explore LLM Amplification <span>↗</span></a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ AMPLIFICATION TECHNOLOGY ============ -->
-  <section class="tech">
-    <div class="container">
-      <h2 class="section-title reveal">Dsrt Amplification Technology</h2>
-
-      <div class="tech-grid">
-        <!-- LEFT: IMAGE -->
-        <div class="tech-media media-frame reveal">
-          <!-- 👇 AMPLIFICATION IMAGE PLACEHOLDER -->
-          <img src="assets/images/amplification-tech.png" alt="DSRT Amplification Technology"
-               onerror="this.parentElement.classList.add('no-img')" />
-          <div class="ph">
-            <div>Amplification Image<code>assets/images/amplification-tech.png</code></div>
+<!-- SECTION 03: WORK MODE -->
+<section class="feature-section workmode-section">
+  <div class="container">
+    <div class="section-topline"><span>03 / WORK MODE</span><span>UNIFIED WORKSPACE</span></div>
+    <div class="section-intro">
+      <h2>One Workspace.<br>Multiple AI Capabilities.</h2>
+      <p>A workspace built to bring model access, contextual interactions, and task execution into a single environment.</p>
+    </div>
+    <div class="workmode-grid">
+      <div class="workmode-main">
+        <div class="workspace-visual">
+          <div class="workspace-top"><span class="workspace-logo">DSRT <b>AI</b></span><span class="workspace-status">WORKSPACE / ACTIVE</span></div>
+          <div class="workspace-body">
+            <div class="workspace-sidebar">
+              <span class="ws-label">ENVIRONMENT</span>
+              <div class="ws-item selected">◈ &nbsp; Work Mode</div>
+              <div class="ws-item">◇ &nbsp; Models</div>
+              <div class="ws-item">⌁ &nbsp; History</div>
+              <div class="ws-item">⊞ &nbsp; Files</div>
+            </div>
+            <div class="workspace-chat">
+              <span class="ws-label">AI EXECUTION</span>
+              <div class="ws-message ws-user">Analyze this task and provide a structured response.</div>
+              <div class="ws-message ws-ai"><span class="ws-ai-label">DSRT AI</span><br>Task context established. Processing with the selected AI environment...</div>
+              <div class="ws-input">Enter your task... <span>↑</span></div>
+            </div>
           </div>
         </div>
-
-        <!-- RIGHT: CONTENT -->
-        <div class="tech-content reveal">
-          <h3 class="tech-heading">More intelligence from every token.</h3>
-
-          <p class="tech-body">
-            DSRT AI is an intelligence amplification system that improves how artificial
-            intelligence processes work. It coordinates task understanding, context, model
-            execution, reasoning, and verification to produce more useful results from
-            available computation.
-          </p>
-
-          <p class="tech-italic">
-            It helps organizations reduce unnecessary AI expenditure while maintaining the
-            quality and reliability their operations require.
-          </p>
-
-          <a href="learn.html" class="explore-link">
-            <span>Explore the technology</span>
-            <span class="arrow">→</span>
-          </a>
-        </div>
+      </div>
+      <div class="workmode-features">
+        <div class="mini-feature"><span>01</span><h3>Unified workspace</h3><p>Centralized environment for AI-assisted work.</p></div>
+        <div class="mini-feature"><span>02</span><h3>Model selection</h3><p>Choose from available models and providers.</p></div>
+        <div class="mini-feature"><span>03</span><h3>Contextual conversations</h3><p>Maintain task context across interactions.</p></div>
+        <div class="mini-feature"><span>04</span><h3>Document & file inputs</h3><p>Work with supported task-related inputs.</p></div>
+        <div class="mini-feature"><span>05</span><h3>Execution visibility</h3><p>Understand how your tasks are processed.</p></div>
+        <div class="mini-feature"><span>06</span><h3>Amplified execution</h3><p>Use amplification capabilities within your workflow.</p></div>
+        <a class="feature-text-link" href="product.html">Explore Work Mode <span>↗</span></a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ MOBILE MENU ============ -->
-  <div class="mobile-menu" id="mobileMenu">
+<!-- SECTION 04: WAR MODE -->
+<section class="feature-section warmode-section">
+  <div class="container">
+    <div class="section-topline"><span>04 / WAR MODE</span><span>COMPARATIVE EVALUATION</span></div>
+    <div class="section-intro">
+      <h2>Compare Performance.<br>Examine the Difference.</h2>
+      <p>Compare standard and amplified execution to better understand how different processing approaches perform.</p>
+    </div>
+    <div class="comparison-panel">
+      <div class="comparison-header">
+        <div><span class="comparison-label">EXECUTION ENVIRONMENT</span><h3>Performance Comparison</h3></div>
+        <span class="comparison-badge">STANDARD / AMPLIFIED</span>
+      </div>
+      <div class="comparison-columns">
+        <div class="comparison-column">
+          <span class="comparison-type">01 / BASELINE</span>
+          <h3>Standard</h3>
+          <p>Observe the baseline execution for a task.</p>
+          <div class="comparison-placeholder">
+            <div class="placeholder-line long"></div><div class="placeholder-line"></div><div class="placeholder-line short"></div>
+          </div>
+        </div>
+        <div class="comparison-column amplified">
+          <span class="comparison-type">02 / AMPLIFIED</span>
+          <h3>DSRT Amplification</h3>
+          <p>Examine the amplified execution and its outcome.</p>
+          <div class="comparison-placeholder">
+            <div class="placeholder-line long"></div><div class="placeholder-line"></div><div class="placeholder-line short"></div>
+          </div>
+        </div>
+      </div>
+      <div class="comparison-metrics">
+        <div><span>METRIC 01</span><strong>Token Consumption</strong></div>
+        <div><span>METRIC 02</span><strong>Execution Cost</strong></div>
+        <div><span>METRIC 03</span><strong>Response Quality</strong></div>
+        <div><span>METRIC 04</span><strong>Processing Time</strong></div>
+      </div>
+    </div>
+    <a class="feature-text-link" href="product.html">Explore War Mode <span>↗</span></a>
+  </div>
+</section>
+
+<!-- SECTION 05: MODELS -->
+<section class="feature-section models-section">
+  <div class="container">
+    <div class="section-topline"><span>05 / MODEL & PROVIDER SUPPORT</span><span>FLEXIBLE AI ECOSYSTEM</span></div>
+    <div class="models-layout">
+      <div>
+        <span class="section-kicker">MODEL INDEPENDENCE</span>
+        <h2>Work Across<br>AI Providers.</h2>
+      </div>
+      <div>
+        <p class="large-copy">Access a flexible AI environment designed to support different models and providers, giving you choice in how your AI workflows are configured.</p>
+        <div class="provider-grid">
+          <div class="provider-card"><span>MODEL / 01</span><strong>Provider Compatibility</strong><p>Multi-provider compatibility</p></div>
+          <div class="provider-card"><span>MODEL / 02</span><strong>Flexible Selection</strong><p>Choose your preferred model</p></div>
+          <div class="provider-card"><span>MODEL / 03</span><strong>Bring Your Own Key</strong><p>BYOK support</p></div>
+          <div class="provider-card"><span>MODEL / 04</span><strong>Provider Information</strong><p>Understand your configuration</p></div>
+        </div>
+        <a class="feature-text-link" href="product.html">Explore Supported Models <span>↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06: MEASUREMENT -->
+<section class="feature-section measurement-section">
+  <div class="container">
+    <div class="section-topline"><span>06 / MEASUREMENT & TRANSPARENCY</span><span>EXECUTION METRICS</span></div>
+    <div class="section-intro">
+      <h2>Understand What<br>Every Execution Costs.</h2>
+      <p>Make AI usage more understandable with execution-level metrics that help evaluate efficiency, cost, and output.</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card"><span class="metric-index">01</span><div class="metric-symbol">⌁</div><h3>Token Usage</h3><p>Understand token consumption across AI tasks.</p></div>
+      <div class="metric-card"><span class="metric-index">02</span><div class="metric-symbol">$</div><h3>Cost Analysis</h3><p>Evaluate execution cost and usage expenditure.</p></div>
+      <div class="metric-card"><span class="metric-index">03</span><div class="metric-symbol">◷</div><h3>Latency Tracking</h3><p>Observe processing and response time.</p></div>
+      <div class="metric-card"><span class="metric-index">04</span><div class="metric-symbol">◎</div><h3>Quality Evaluation</h3><p>Review response quality and task outcomes.</p></div>
+      <div class="metric-card"><span class="metric-index">05</span><div class="metric-symbol">⇄</div><h3>Comparative Results</h3><p>Compare execution results across approaches.</p></div>
+    </div>
+    <a class="feature-text-link" href="product.html">Explore Performance Measurement <span>↗</span></a>
+  </div>
+</section>
+
+<!-- SECTION 07: ENTERPRISE -->
+<section class="feature-section enterprise-section">
+  <div class="container">
+    <div class="section-topline"><span>07 / ENTERPRISE CAPABILITIES</span><span>ORGANIZATIONAL AI</span></div>
+    <div class="enterprise-layout">
+      <div>
+        <span class="section-kicker">BUILT TO SCALE WITH YOUR NEEDS</span>
+        <h2>Designed for Organizational AI Workflows.</h2>
+      </div>
+      <div>
+        <p class="large-copy">Capabilities designed to support organizations exploring, evaluating, and integrating AI into their operations.</p>
+        <div class="enterprise-list">
+          <div><span>01</span><strong>Flexible Deployment</strong><p>Adapt deployment to organizational requirements.</p></div>
+          <div><span>02</span><strong>Provider Flexibility</strong><p>Work with supported AI provider options.</p></div>
+          <div><span>03</span><strong>Usage Visibility</strong><p>Gain visibility into AI usage and execution.</p></div>
+          <div><span>04</span><strong>Integration Support</strong><p>Support AI integration into workflows.</p></div>
+          <div><span>05</span><strong>Enterprise Evaluation</strong><p>Assess capabilities against organizational needs.</p></div>
+        </div>
+        <a class="feature-text-link" href="contact.html">Explore Enterprise Solutions <span>↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 08: HOW IT WORKS -->
+<section class="feature-section process-section">
+  <div class="container">
+    <div class="section-topline"><span>08 / HOW IT WORKS</span><span>FROM TASK TO OUTCOME</span></div>
+    <div class="section-intro">
+      <h2>From Task to<br>Measurable Outcome.</h2>
+      <p>A straightforward process to work with AI, execute your task, and review the result.</p>
+    </div>
+    <div class="process-grid">
+      <article><span class="process-number">01</span><div class="process-icon">⌘</div><h3>Define Task</h3><p>Start with the task or objective you want to accomplish.</p></article>
+      <article><span class="process-number">02</span><div class="process-icon">◎</div><h3>Select Environment</h3><p>Choose the model, provider, or execution mode.</p></article>
+      <article><span class="process-number">03</span><div class="process-icon">↗</div><h3>Execute With AI</h3><p>Process the task through your selected AI workflow.</p></article>
+      <article><span class="process-number">04</span><div class="process-icon">⌁</div><h3>Review Outcome</h3><p>Evaluate the response, usage, and performance.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="feature-final-cta">
+  <div class="container">
+    <div class="section-topline"><span>DSRT AI / NEXT STEP</span><span>INTELLIGENCE AMPLIFICATION</span></div>
+    <h2>Put AI Efficiency<br><span>Into Practice.</span></h2>
+    <p>Explore DSRT AI and experience a more measurable approach to AI execution.</p>
+    <div class="feature-hero-actions">
+      <a href="registration.html" class="feature-btn feature-btn-primary">Get Started <span>↗</span></a>
+      <a href="contact.html" class="feature-btn feature-btn-secondary">Contact Enterprise Team <span>↗</span></a>
+    </div>
+  </div>
+</section>
+</section>
+<div class="mobile-menu" id="mobileMenu">
     <div class="close-row">
       <button class="icon-btn" id="menuClose" aria-label="Close menu" style="border:1px solid var(--ink)">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
@@ -485,5 +1269,25 @@
 
   <script src="/compiled/pages/features_html-inline-1.js"></script>
   <script src="/compiled/assets/js/professional-motion.js" defer></script>
+<script>
+/* STICKY NAVBAR SCROLL COLOR */
+(function () {
+  const header = document.querySelector('.features-page .site-header');
+  if (!header) return;
+
+  function updateNavbar() {
+    header.classList.toggle('scrolled', window.scrollY > 30);
+  }
+
+  updateNavbar();
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+})();
+</script>
 </body>
 </html>
+
+
+
+
+
+
