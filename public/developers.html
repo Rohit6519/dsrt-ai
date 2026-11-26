@@ -1,9 +1,2340 @@
-<!doctype html><html lang="en"><head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Exo+2:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Find the starting points for understanding DSRT AI integrations, APIs and developer workflows."><title>Developers | DSRT AI</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><style>
-:root{--ink:#17191c;--muted:#626a73;--line:#e5e7eb;--soft:#f7f8fa;--blue:#2457c5}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font:16px/1.65 Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.global-header{height:72px;padding:0 clamp(20px,5vw,76px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:rgba(255,255,255,.96);position:sticky;top:0;z-index:50}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.03em}.brand img{width:32px;height:32px;object-fit:contain}.global-header nav,.header-actions{display:flex;align-items:center;gap:28px;font-size:13px;color:#414850}.global-header nav a:hover,.header-actions a:hover{color:var(--blue)}.header-cta{background:#17191c;color:#fff!important;padding:9px 16px;border-radius:6px}.mobile-menu{display:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:8px}.page-hero{padding:100px clamp(22px,9vw,140px) 82px;background:#fff;border-bottom:1px solid var(--line)}.eyebrow{font:600 11px/1.4 'IBM Plex Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:#68717a;margin:0 0 22px}.page-hero h1{font-size:clamp(42px,6.5vw,76px);line-height:1.04;letter-spacing:-.055em;max-width:900px;margin:0 0 24px;font-weight:600}.page-hero p{font-size:18px;line-height:1.7;color:var(--muted);max-width:700px;margin:0 0 30px}.text-link{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;border-bottom:1px solid #17191c;padding:8px 0}.content-section{padding:76px clamp(22px,9vw,140px)}.section-heading{max-width:650px;margin-bottom:34px}.section-heading h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.04em;line-height:1.15;margin:0 0 12px}.section-heading p{color:var(--muted);margin:0}.content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.content-card{border:1px solid var(--line);border-radius:10px;padding:26px;background:#fff;min-height:150px}.content-card .number{font:12px 'IBM Plex Mono',monospace;color:#8b929a}.content-card h3{font-size:18px;margin:18px 0 8px;letter-spacing:-.02em}.content-card p{font-size:14px;color:var(--muted);margin:0;max-width:58ch}.page-cta{margin:0 clamp(22px,9vw,140px) 80px;padding:34px;border:1px solid var(--line);border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:space-between;gap:24px}.page-cta h2{font-size:24px;margin:0}.page-cta a{background:#17191c;color:white;padding:11px 18px;border-radius:6px;font-size:13px;font-weight:600}.global-footer{padding:52px clamp(22px,6vw,90px) 24px;background:#f7f8fa;border-top:1px solid var(--line);display:grid;grid-template-columns:2fr repeat(3,1fr);gap:30px}.global-footer strong{display:block;margin-bottom:14px;font-size:13px}.global-footer p,.global-footer a{font-size:13px;color:var(--muted)}.global-footer a{display:block;margin:8px 0}.global-footer a:hover{color:var(--blue)}.footer-bottom{grid-column:1/-1;border-top:1px solid var(--line);padding-top:18px;margin-top:20px;display:flex;justify-content:space-between;color:#777;font-size:12px}.footer-bottom span{display:flex;gap:12px}.footer-bottom span a{display:inline;margin:0}@media(max-width:800px){.global-header nav,.header-actions{display:none}.mobile-menu{display:block}.global-header.menu-open nav{display:flex;position:absolute;top:72px;left:0;right:0;padding:18px 24px;background:white;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:16px}.page-hero{padding-top:70px}.content-grid{grid-template-columns:1fr}.page-cta{margin-bottom:48px;align-items:flex-start;flex-direction:column}.global-footer{grid-template-columns:repeat(2,1fr)}.global-footer>div:first-child{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:8px}}
-</style>  <link rel="stylesheet" href="assets/css/professional.css">
-</head><body><header class="global-header"><a class="brand" href="index.html"><img src="assets/dsrt-logo.png" alt="DSRT AI" onerror="this.style.display='none'"><span>DSRT AI</span></a><nav aria-label="Main navigation"><a href="product.html">Platform</a><a href="solutions.html">Solutions</a><a href="dsrt-labs.html">Research</a><a href="developers.html">Developers</a><a href="about.html">Company</a></nav><div class="header-actions"><a href="registration.html">Sign in / Access</a><a class="header-cta" href="enterprise.html">Contact</a></div><button class="mobile-menu" aria-label="Open navigation" aria-expanded="false">☰</button></header><main><section class="page-hero"><p class="eyebrow">Developers / DSRT AI</p><h1>Build with a clear technical foundation.</h1><p>Find the starting points for understanding DSRT AI integrations, APIs and developer workflows.</p><a class="text-link" href="registration.html">Read documentation <span aria-hidden="true">→</span></a></section><section class="content-section"><div class="section-heading"><h2>Developer resources</h2><p>Explore the key areas and principles behind this part of DSRT AI.</p></div><div class="content-grid"><article class="content-card"><span class="number">01</span><h3>Getting started</h3><p>Understand the platform concepts and prerequisites.</p></article><article class="content-card"><span class="number">02</span><h3>API reference</h3><p>Review endpoints and request formats when available.</p></article><article class="content-card"><span class="number">03</span><h3>Integrations</h3><p>Plan how DSRT AI can fit into your existing systems.</p></article><article class="content-card"><span class="number">04</span><h3>Security</h3><p>Review authentication and data-handling considerations.</p></article></div></section><section class="page-cta"><h2>Explore what DSRT AI can do.</h2><a href="enterprise.html">Talk to DSRT AI →</a></section></main><footer class="global-footer"><div><strong>DSRT AI</strong><p>AI platform development, research and enterprise technology.</p></div><div><strong>Platform</strong><a href="product.html">Product</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="how-it-works.html">How it works</a></div><div><strong>Explore</strong><a href="dsrt-labs.html">DSRT Labs</a><a href="developers.html">Developers</a><a href="blog.html">Insights</a><a href="case-studies.html">Case studies</a></div><div><strong>Company</strong><a href="about.html">About</a><a href="enterprise.html">Enterprise</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div><div class="footer-bottom">© DSRT AI. All rights reserved. <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="security.html">Security</a></span></div></footer><script src="/compiled/pages/developers_html-inline-1.js"></script>  <script src="/compiled/assets/js/professional-motion.js" defer></script>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developers | DSRT AI</title>
+<meta name="description" content="Explore DSRT AI developer technology, intelligence amplification, macOS workspaces, computational efficiency, and verified execution architectures.">
+<link rel="canonical" href="https://www.dsrt.ai/developers">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Preload your hero background image asset -->
+<link rel="preload" as="image" href="assets/hero-background.png" fetchpriority="high">
+<style>
+/* ============================================================
+   DSRT AI — Developers Platform (Refined macOS & Solid Abstract Edition)
+   Color System: Deep Slate, Clean Minerals, macOS Dark Chrome & Soft Inks
+   ============================================================ */
+:root {
+  --dsrt-ink: #0D0F11;
+  --dsrt-ink-soft: #16181B;
+  --dsrt-canvas: #FFFFFF;
+  --dsrt-paper: #F8F9F8;
+  --dsrt-warm: #F4F4F0;
+  --dsrt-mineral: #E8ECE8;
+  --dsrt-mineral-border: #D8DDD8;
+  --dsrt-accent: #3E5463;
+  --dsrt-accent-light: #526E82;
+  --dsrt-cyan: #3FE0D0;
+  --dsrt-cyan-glow: rgba(63, 224, 208, 0.28);
+  --dsrt-body: #23272A;
+  --dsrt-secondary: #5F6870;
+  --dsrt-muted: #8A949D;
+  --dsrt-border: #DCE1E3;
+  --dsrt-border-light: #EBF0EC;
+
+  /* macOS UI tokens */
+  --macos-dark-bg: #151719;
+  --macos-dark-surface: #1E2124;
+  --macos-dark-surface-elevated: #262A2E;
+  --macos-dark-border: rgba(255, 255, 255, 0.08);
+  --macos-dark-border-strong: rgba(255, 255, 255, 0.16);
+  --macos-traffic-red: #FF5F56;
+  --macos-traffic-yellow: #FFBD2E;
+  --macos-traffic-green: #27C93F;
+
+  /* Fonts & metrics */
+  --dsrt-font: 'Lexend', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  --dsrt-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --header-height: 68px;
+  --subnav-height: 52px;
+}
+
+/* Global Reset & Base */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--dsrt-font);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--dsrt-body);
+  background-color: var(--dsrt-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+p { margin: 0 0 1rem; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+button { font-family: inherit; }
+
+::selection {
+  background: #CBE8E4;
+  color: var(--dsrt-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--dsrt-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Containers & Grid */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 48px;
+}
+@media (max-width: 900px) { .container { padding-inline: 24px; } }
+@media (max-width: 600px) { .container { padding-inline: 18px; } }
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .grid-12 > * { grid-column: 1 / -1 !important; }
+}
+
+.section {
+  padding-block: 100px;
+  position: relative;
+}
+@media (max-width: 768px) { .section { padding-block: 64px; } }
+
+/* Typography system */
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dsrt-secondary);
+}
+.eyebrow-accent { color: var(--dsrt-accent-light); }
+.eyebrow-light { color: #A4B3BF; }
+
+/* Less bold headings per user request */
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--dsrt-ink);
+  letter-spacing: -0.025em;
+  font-weight: 550; /* A bit less bold */
+}
+.hero-title {
+  font-size: clamp(38px, 5.2vw, 68px);
+  font-weight: 550; /* Softer, high-end editorial weight */
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--dsrt-ink);
+  max-width: 22ch;
+  margin: 0 auto 24px;
+}
+.section-title {
+  font-size: clamp(30px, 3.8vw, 48px);
+  font-weight: 550;
+  line-height: 1.18;
+  color: var(--dsrt-ink);
+  margin-bottom: 20px;
+}
+.section-title--dark { color: #FFFFFF; }
+
+.section-lede {
+  font-size: clamp(16px, 1.35vw, 18.5px);
+  line-height: 1.62;
+  color: var(--dsrt-secondary);
+  max-width: 62ch;
+}
+.section-lede--centered {
+  margin-inline: auto;
+  text-align: center;
+}
+.section-lede--dark { color: #A6B1B9; }
+
+/* Status Badges */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 1px solid var(--dsrt-border);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--dsrt-secondary);
+  vertical-align: middle;
+}
+.status-pill::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #8C9BA5;
+}
+.status-pill--active::before { background-color: #27C93F; }
+.status-pill--dark {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #D3DBE0;
+}
+
+/* Pill Action Buttons */
+.btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 28px;
+  border-radius: 999px; /* Pill button like screenshot */
+  font-size: 14.5px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+}
+.btn--primary {
+  background: var(--dsrt-ink);
+  color: #FFFFFF;
+}
+.btn--primary:hover {
+  background: #272C30;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+.btn--white {
+  background: #FFFFFF;
+  color: var(--dsrt-ink);
+  border-color: var(--dsrt-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.btn--white:hover {
+  background: #F7F9F8;
+  border-color: #CCD3D0;
+  transform: translateY(-1px);
+}
+.btn--ghost-dark {
+  background: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.btn--ghost-dark:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================================
+   01 · GLOBAL HEADER (Screenshot 1 & 6 Dark Bar)
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #121417;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+}
+.brand-logo-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+/* Fallback vector spiral icon if logo asset not yet dropped */
+.brand-fallback-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: conic-gradient(from 180deg at 50% 50%, #151719 0deg, #A8B5B2 180deg, #FFFFFF 360deg);
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+}
+.primary-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-pill-item a {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 450;
+  color: #A2ABB2;
+  transition: all 0.16s ease;
+}
+.nav-pill-item a:hover {
+  color: #FFFFFF;
+}
+/* Active Pill matching Screenshot 1 (white capsule) */
+.nav-pill-item.is-active a,
+.nav-pill-item a[aria-current="page"] {
+  background: #FFFFFF;
+  color: #121417 !important;
+  font-weight: 500;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.sign-in-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #D3DBE0;
+  padding: 8px 12px;
+  transition: color 0.15s ease;
+}
+.sign-in-link:hover { color: #FFFFFF; }
+.header-get-started {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 9px 20px;
+  font-size: 13.5px;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.16s ease;
+}
+.header-get-started:hover {
+  background: #1F2226;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile Toggle */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  padding: 8px;
+  cursor: pointer;
+}
+@media (max-width: 920px) {
+  .primary-nav, .header-right { display: none; }
+  .mobile-toggle { display: block; }
+}
+
+/* Mobile drawer */
+.mobile-nav-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #14171A;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 24px 28px;
+  display: none;
+}
+.mobile-nav-drawer.is-open { display: block; }
+.mobile-nav-drawer ul { list-style: none; padding: 0; margin: 0; }
+.mobile-nav-drawer li a {
+  display: block;
+  padding: 12px 0;
+  font-size: 16px;
+  color: #CCD3D8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ============================================================
+   02 · LOCAL SECTION SUBNAV
+   ============================================================ */
+.local-subnav {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--dsrt-border);
+}
+.local-subnav-list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.local-subnav-list::-webkit-scrollbar { display: none; }
+.local-subnav-link {
+  display: inline-flex;
+  align-items: center;
+  height: var(--subnav-height);
+  padding: 0 14px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--dsrt-secondary);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+.local-subnav-link:hover { color: var(--dsrt-ink); }
+.local-subnav-link.is-active {
+  color: var(--dsrt-ink);
+  border-bottom-color: var(--dsrt-ink);
+}
+
+/* ============================================================
+   03 · HERO (Screenshot 1 Reference Inspired Centered Layout)
+   ============================================================ */
+.hero-section {
+  position: relative;
+  min-height: 84vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: 100px 90px;
+  overflow: hidden;
+  background-color: #E6F8F6; /* Fallback aura color */
+}
+
+/* PLACEHOLDER: Replace 'assets/hero-background.png' with your hero image!
+   The CSS mesh below guarantees an identical atmospheric cyan aura out of the box. */
+.hero-canvas-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 50% 40%, rgba(95, 237, 222, 0.52) 0%, rgba(135, 245, 233, 0.32) 32%, rgba(220, 252, 249, 0.75) 60%, #FFFFFF 100%),
+    url("assets/hero-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin-inline: auto;
+}
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #375357;
+  margin-bottom: 22px;
+}
+.hero-lede {
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.6;
+  color: #3A474D;
+  max-width: 62ch;
+  margin: 0 auto 36px;
+}
+.hero-bottom-pills {
+  margin-top: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hero-pill-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334347;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(138, 199, 194, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* ============================================================
+   macOS UI SYSTEM (High-Fidelity macOS Window Frames)
+   ============================================================ */
+.macos-window {
+  border-radius: 12px;
+  background: var(--macos-dark-bg);
+  color: #E2E8F0;
+  border: 1px solid var(--macos-dark-border-strong);
+  box-shadow:
+    0 24px 60px -12px rgba(10, 15, 20, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  font-family: var(--dsrt-font);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+.macos-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding-inline: 16px;
+  background: #1A1C1F;
+  border-bottom: 1px solid var(--macos-dark-border);
+  user-select: none;
+}
+.macos-traffic-lights {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 60px;
+}
+.traffic-dot {
+  width: 11.5px;
+  height: 11.5px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+.traffic-dot--red { background: var(--macos-traffic-red); border: 1px solid rgba(0,0,0,0.18); }
+.traffic-dot--yellow { background: var(--macos-traffic-yellow); border: 1px solid rgba(0,0,0,0.18); }
+.traffic-dot--green { background: var(--macos-traffic-green); border: 1px solid rgba(0,0,0,0.18); }
+
+.macos-title-center {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #8C98A2;
+}
+.macos-title-center svg,
+.macos-title-center img {
+  opacity: 0.85;
+}
+.macos-title-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 60px;
+  justify-content: flex-end;
+}
+.badge-mode-pill {
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #9CA8B2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================================
+   04 · MACOS WORKSPACE SHOWCASE (Screenshot 6: Work Mode & War Mode)
+   ============================================================ */
+.workspace-tabs-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.workspace-tab-btn {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--dsrt-border);
+  background: #FFFFFF;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--dsrt-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.workspace-tab-btn.is-active {
+  background: var(--dsrt-ink);
+  color: #FFFFFF;
+  border-color: var(--dsrt-ink);
+}
+
+.workspace-shell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 520px;
+}
+@media (max-width: 820px) {
+  .workspace-shell { grid-template-columns: 1fr; }
+  .workspace-sidebar { display: none; }
+}
+
+/* Sidebar */
+.workspace-sidebar {
+  background: #111315;
+  border-right: 1px solid var(--macos-dark-border);
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.btn-new-convo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  color: #E2E8F0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+.btn-new-convo:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-group-title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #616B74;
+  margin-bottom: 8px;
+  padding-inline: 8px;
+}
+.sidebar-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 450;
+  color: #929FA8;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+.sidebar-nav-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  color: #E2E8F0;
+}
+.sidebar-nav-item.is-selected {
+  background: rgba(255, 255, 255, 0.09);
+  color: #FFFFFF;
+  font-weight: 500;
+}
+.sidebar-nav-item svg { opacity: 0.7; }
+
+/* Main Stage / Chat View (Reference 6) */
+.workspace-stage {
+  display: flex;
+  flex-direction: column;
+  background: var(--macos-dark-bg);
+}
+.workspace-stage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--macos-dark-border);
+}
+.workspace-stage-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.workspace-dialogue-pane {
+  flex: 1;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+}
+.chat-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  max-width: 720px;
+}
+.chat-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.chat-avatar--user {
+  background: #2D3136;
+  color: #CBD5E1;
+}
+.chat-avatar--ai {
+  background: #FFFFFF;
+  color: #121417;
+}
+.chat-avatar--ai svg { width: 18px; height: 18px; }
+
+.chat-bubble {
+  flex: 1;
+}
+.chat-speaker {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7B8690;
+  margin-bottom: 5px;
+}
+.chat-text {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #D6DEE3;
+}
+.chat-text strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* Follow-up input bar (Reference 6) */
+.workspace-input-bar-wrap {
+  padding: 16px 24px 22px;
+  border-top: 1px solid var(--macos-dark-border);
+}
+.workspace-input-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1E2124;
+  border: 1px solid var(--macos-dark-border-strong);
+  border-radius: 8px;
+  padding: 8px 12px;
+  transition: border-color 0.15s ease;
+}
+.workspace-input-bar:focus-within {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.workspace-input-bar input {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+}
+.workspace-input-bar input::placeholder {
+  color: #6C7781;
+}
+.btn-input-send {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: #121417;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: opacity 0.15s ease;
+}
+.btn-input-send:hover { opacity: 0.9; }
+
+/* War Mode View (Screenshot 6 bottom preview) */
+.war-mode-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 24px;
+}
+@media (max-width: 768px) { .war-mode-grid { grid-template-columns: 1fr; } }
+.model-box {
+  border: 1px solid var(--macos-dark-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 18px;
+}
+.model-box-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--macos-dark-border);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+.model-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #E2E8F0;
+}
+.metric-tag {
+  font-size: 11px;
+  font-family: var(--dsrt-mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #A0ACB6;
+}
+
+/* ============================================================
+   05 · ABSTRACT SOLID DIAGRAMS (Screenshot 2: Enterprise Knowledge & Operations)
+   ============================================================ */
+.diagram-card {
+  border: 1px solid var(--dsrt-border);
+  border-radius: 12px;
+  background: #FFFFFF;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.diagram-card:hover {
+  border-color: #B8C2BC;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.06);
+}
+.diagram-media-frame {
+  background: #FAFAFA;
+  border: 1px solid #ECECEC;
+  border-radius: 8px;
+  padding: 20px;
+  aspect-ratio: 16 / 9.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.diagram-media-frame svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.diagram-content h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.diagram-content p {
+  color: var(--dsrt-body);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.diagram-example {
+  padding-left: 14px;
+  border-left: 2px solid var(--dsrt-border);
+  font-size: 13.5px !important;
+  color: var(--dsrt-secondary) !important;
+  margin: 0 !important;
+}
+
+/* ============================================================
+   06 · COCO WORKSPACE (Screenshot 3 Reference macOS UI)
+   ============================================================ */
+.coco-split {
+  display: grid;
+  grid-template-columns: 4.8fr 7.2fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 960px) {
+  .coco-split { grid-template-columns: 1fr; }
+}
+
+.coco-ide-preview {
+  display: grid;
+  grid-template-columns: 180px 1fr 220px;
+  min-height: 380px;
+  background: #FFFFFF;
+  color: var(--dsrt-ink);
+  font-family: var(--dsrt-font);
+}
+@media (max-width: 800px) {
+  .coco-ide-preview { grid-template-columns: 1fr; }
+  .coco-col-tree, .coco-col-plan { display: none; }
+}
+.coco-col-tree {
+  border-right: 1px solid var(--dsrt-border);
+  padding: 16px;
+  background: #FAFAFA;
+  font-size: 12.5px;
+}
+.tree-title {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--dsrt-muted);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.tree-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-family: var(--dsrt-mono);
+  font-size: 12px;
+  color: var(--dsrt-body);
+}
+.tree-item.is-active {
+  background: #EBF0EC;
+  font-weight: 500;
+  color: var(--dsrt-ink);
+}
+
+.coco-col-editor {
+  padding: 16px 20px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+.editor-line-skeleton {
+  height: 8px;
+  border-radius: 4px;
+  background: #EFEFEF;
+  margin-bottom: 12px;
+}
+.editor-highlight-box {
+  background: #F3F6F4;
+  border: 1px solid #D6DED9;
+  border-left: 3px solid var(--dsrt-accent);
+  border-radius: 4px;
+  padding: 12px 14px;
+  margin-block: 8px 14px;
+}
+.editor-highlight-line {
+  height: 7px;
+  background: #CBD5D0;
+  border-radius: 4px;
+  width: 75%;
+}
+
+.coco-col-plan {
+  border-left: 1px solid var(--dsrt-border);
+  padding: 16px;
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.plan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--dsrt-secondary);
+}
+.plan-check {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1.5px solid var(--dsrt-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.plan-check--done {
+  background: var(--dsrt-accent);
+  color: #FFFFFF;
+}
+
+/* ============================================================
+   07 · COMPUTATIONAL EFFICIENCY (Screenshot 4 Reference)
+   ============================================================ */
+.efficiency-split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 960px) { .efficiency-split { grid-template-columns: 1fr; } }
+
+.efficiency-card {
+  border: 1px solid var(--dsrt-border);
+  border-radius: 12px;
+  background: #FFFFFF;
+  padding: 32px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+/* ============================================================
+   08 · DSRT LABS (Screenshot 5 Reference)
+   ============================================================ */
+.labs-split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 960px) { .labs-split { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   09 · BUILD & CODE STUDIO (macOS Developer Terminal Panel)
+   ============================================================ */
+.code-studio-panel {
+  border-radius: 10px;
+  background: #14171A;
+  border: 1px solid var(--macos-dark-border-strong);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+.code-studio-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #1B1E22;
+  border-bottom: 1px solid var(--macos-dark-border);
+}
+.code-lang-tabs {
+  display: flex;
+  gap: 4px;
+}
+.code-tab-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #8C99A4;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+.code-tab-btn:hover { color: #FFFFFF; }
+.code-tab-btn.is-active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+
+.copy-code-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 12.5px;
+  color: #D3DBE0;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+.copy-code-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+.code-pre-box {
+  margin: 0;
+  padding: 24px;
+  overflow-x: auto;
+  font-family: var(--dsrt-mono);
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #E2E8F0;
+}
+/* Code Tokens */
+.tok-kw { color: #81A1C1; font-weight: 500; }
+.tok-str { color: #A3BE8C; }
+.tok-prop { color: #D8DEE9; }
+.tok-num { color: #B48EAD; }
+.tok-comm { color: #616E7D; font-style: italic; }
+
+/* ============================================================
+   10 · LIFECYCLE & INTEGRATION (Clean Abstract Architecture)
+   ============================================================ */
+.lifecycle-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  counter-reset: step-counter;
+}
+@media (max-width: 1024px) { .lifecycle-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .lifecycle-grid { grid-template-columns: 1fr; } }
+
+.lifecycle-step-card {
+  border-top: 2px solid var(--dsrt-ink);
+  padding-top: 18px;
+}
+.step-number-tag {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--dsrt-accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.lifecycle-step-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.lifecycle-step-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--dsrt-secondary);
+  margin: 0;
+}
+
+/* ============================================================
+   11 · ACCESS & REGISTRATION SECTION
+   ============================================================ */
+.access-hero-card {
+  border-radius: 16px;
+  background: #111316;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 72px 48px;
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.access-hero-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 240px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(63, 224, 208, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   12 · GLOBAL FOOTER
+   ============================================================ */
+.site-footer {
+  background: #0E1012;
+  color: #9AA6AF;
+  padding: 80px 0 36px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
+  gap: 40px;
+  margin-bottom: 64px;
+}
+@media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; } }
+
+.footer-brand-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+.footer-col h4 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-col a {
+  font-size: 14px;
+  color: #8C99A3;
+  transition: color 0.15s ease;
+}
+.footer-col a:hover { color: #FFFFFF; }
+
+.footer-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  font-size: 13px;
+  color: #6A767F;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+</style>
+</head>
+
+<body class="developers-page">
+
+<!-- ============================================================
+     01 · GLOBAL HEADER (Screenshot 1 & 6 Style Dark Bar)
+     ============================================================ -->
+<header class="site-header" id="top">
+  <div class="container site-header-inner">
+    <!-- Brand / Spiral icon -->
+    <a class="brand-link" href="index.html" aria-label="DSRT AI Home">
+      <!-- Fallback elegant spiral icon if image asset not yet present in assets/ -->
+      <img class="brand-logo-icon" src="assets/dsrt-logo.png" alt="DSRT AI" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+      <span class="brand-fallback-icon" style="display:none;" aria-hidden="true"></span>
+      <span style="font-size:16px; font-weight:600; letter-spacing:-0.01em;">DSRT AI</span>
+    </a>
+
+    <!-- Primary Nav: White pill on active item matching Screenshot 1 -->
+    <nav class="primary-nav" aria-label="Main Navigation">
+      <ul class="primary-nav-list">
+        <li class="nav-pill-item"><a href="#platform">Platform</a></li>
+        <li class="nav-pill-item"><a href="#noitra">Technology</a></li>
+        <li class="nav-pill-item is-active"><a href="#top" aria-current="page">Developers</a></li>
+        <li class="nav-pill-item"><a href="#workspaces">Workspaces</a></li>
+        <li class="nav-pill-item"><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right Header Actions (Sign in + Get Started pill) -->
+    <div class="header-right">
+      <a class="sign-in-link" href="#access">Sign in</a>
+      <a class="header-get-started" href="#access">Get Started</a>
+    </div>
+
+    <!-- Mobile menu hamburger -->
+    <button class="mobile-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-drawer">
+    <ul>
+      <li><a href="#platform">Platform</a></li>
+      <li><a href="#noitra">Technology</a></li>
+      <li><a href="#top">Developers</a></li>
+      <li><a href="#workspaces">Workspaces</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#access">Sign in</a></li>
+      <li><a href="#access" style="color:#FFFFFF; font-weight:600;">Get Started</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============================================================
+     02 · LOCAL SECTION SUBNAV (Sticky)
+     ============================================================ -->
+<nav class="local-subnav" aria-label="Page Sections">
+  <div class="container">
+    <ul class="local-subnav-list">
+      <li><a class="local-subnav-link is-active" href="#overview">Overview</a></li>
+      <li><a class="local-subnav-link" href="#workspaces">Workspaces UI</a></li>
+      <li><a class="local-subnav-link" href="#noitra">Noitra Engine</a></li>
+      <li><a class="local-subnav-link" href="#applications">Applications</a></li>
+      <li><a class="local-subnav-link" href="#coco">Coco IDE</a></li>
+      <li><a class="local-subnav-link" href="#efficiency">Efficiency</a></li>
+      <li><a class="local-subnav-link" href="#build">Build &amp; API</a></li>
+      <li><a class="local-subnav-link" href="#resources">Resources</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============================================================
+     03 · HERO (Centered Layout Inspired by Reference 1)
+     ============================================================ -->
+<section class="hero-section" id="overview">
+  <!-- Dynamic Atmospheric Canvas / Placeholder asset fallback -->
+  <div class="hero-canvas-bg" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <span class="hero-eyebrow">DSRT AI DEVELOPERS</span>
+
+    <!-- Softer, less-bold editorial title per user instruction -->
+    <h1 class="hero-title">DEV-X</h1>
+
+    <p class="hero-lede">
+      Develop intelligent applications on a foundation of intelligence amplification, computational efficiency, and verified execution. Integrate amplification directly into workflows across your company.
+    </p>
+
+    <!-- Dual Pill Buttons (Dark Pill + White Pill) matching Reference 1 -->
+    <div class="btn-row">
+      <a class="btn btn--primary" href="#workspaces">Explore workspaces</a>
+      <a class="btn btn--white" href="#build">Developer documentation</a>
+    </div>
+
+    <!-- Bottom Metadata Pill Group matching Screenshot 1 -->
+    <div class="hero-bottom-pills">
+      <span class="hero-pill-item">Individual, Team, and Enterprise</span>
+      <span class="hero-pill-item">Noitra V4 Engine</span>
+      <span class="hero-pill-item">Enterprise deployment options</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 · MACOS WORKSPACE INTERFACE (Screenshot 6: Work Mode & War Mode)
+     ============================================================ -->
+<section class="section" id="workspaces" style="background:#F6F8F7; padding-bottom:110px;">
+  <div class="container">
+    <div style="text-align:center; max-width:760px; margin:0 auto 40px;">
+      <p class="eyebrow eyebrow-accent">WORK MODE &amp; WAR MODE</p>
+      <h2 class="section-title">Move from question to useful output.</h2>
+      <p class="section-lede section-lede--centered">
+        Bring research, writing, and analysis into a dedicated workspace designed for ongoing tasks and verified conversations. The proposed experience combines model access, context, and amplification in a professional working environment.
+      </p>
+
+      <!-- Interactive Switcher -->
+      <div class="workspace-tabs-control" style="margin-top:24px;">
+        <button class="workspace-tab-btn is-active" type="button" id="btn-show-workmode">Work Mode</button>
+        <button class="workspace-tab-btn" type="button" id="btn-show-warmode">War Mode (Model Comparison)</button>
+      </div>
+    </div>
+
+    <!-- macOS Window Frame (Screenshot 6 Dark Native Style) -->
+    <div class="macos-window" id="demo-macos-window">
+      <!-- Window Titlebar with Traffic Lights -->
+      <div class="macos-titlebar">
+        <div class="macos-traffic-lights">
+          <span class="traffic-dot traffic-dot--red"></span>
+          <span class="traffic-dot traffic-dot--yellow"></span>
+          <span class="traffic-dot traffic-dot--green"></span>
+        </div>
+        <div class="macos-title-center">
+          <!-- Small spiral badge icon -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 9 9"></path></svg>
+          <span id="window-crumb-label">/ Work Mode</span>
+        </div>
+        <div class="macos-title-actions">
+          <span class="badge-mode-pill" id="window-badge-label">Work Mode</span>
+        </div>
+      </div>
+
+      <!-- WORK MODE VIEW (Active by default) -->
+      <div class="workspace-shell" id="view-workmode">
+        <!-- Sidebar Navigation -->
+        <aside class="workspace-sidebar">
+          <button class="btn-new-convo" type="button">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            New conversation
+          </button>
+
+          <div>
+            <div class="sidebar-group-title">WORKSPACE</div>
+            <ul class="sidebar-nav-list">
+              <li class="sidebar-nav-item is-selected">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                Work Mode
+              </li>
+              <li class="sidebar-nav-item" onclick="document.getElementById('btn-show-warmode').click()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                War Mode
+              </li>
+              <li class="sidebar-nav-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Usage
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="sidebar-group-title">RECENT</div>
+            <ul class="sidebar-nav-list">
+              <li class="sidebar-nav-item is-selected">Customer feedback</li>
+              <li class="sidebar-nav-item">Quarterly review</li>
+              <li class="sidebar-nav-item">API Tokenization refactor</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Main Chat Dialogue Area -->
+        <div class="workspace-stage">
+          <div class="workspace-stage-header">
+            <div class="workspace-stage-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#687782" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span>Customer feedback</span>
+            </div>
+            <span class="status-pill status-pill--dark status-pill--active">Verification: active</span>
+          </div>
+
+          <div class="workspace-dialogue-pane">
+            <!-- User Prompt -->
+            <div class="chat-row">
+              <div class="chat-avatar chat-avatar--user">Y</div>
+              <div class="chat-bubble">
+                <div class="chat-speaker">You</div>
+                <p class="chat-text">Summarize the customer feedback and identify the three most frequent themes.</p>
+              </div>
+            </div>
+
+            <!-- DSRT AI Response (Exact Reference 6 Copy) -->
+            <div class="chat-row">
+              <div class="chat-avatar chat-avatar--ai">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8M8 12h8"></path></svg>
+              </div>
+              <div class="chat-bubble">
+                <div class="chat-speaker">DSRT AI</div>
+                <p class="chat-text">
+                  The feedback highlights three recurring themes: <strong>onboarding clarity</strong>, <strong>response speed</strong>, and <strong>export flexibility</strong>. Prioritizing these areas can help improve the overall customer experience.
+                </p>
+                <div style="margin-top:12px; display:flex; gap:8px;">
+                  <span class="status-pill status-pill--dark">Synthesized from 128 responses</span>
+                  <span class="status-pill status-pill--dark">Fact check: 100% verified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Follow-up Input Bar -->
+          <div class="workspace-input-bar-wrap">
+            <div class="workspace-input-bar">
+              <input type="text" id="workspace-demo-input" placeholder="Ask a follow-up question..." value="What specific export formats were most requested?">
+              <button class="btn-input-send" type="button" aria-label="Send follow-up query" onclick="alert('Demo query submitted in verified sandbox.')">
+                &uarr;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WAR MODE VIEW (Comparison Workspace - Toggleable) -->
+      <div id="view-warmode" style="display:none; background:var(--macos-dark-bg);">
+        <div style="padding:16px 24px; border-bottom:1px solid var(--macos-dark-border); display:flex; align-items:center; justify-content:space-between;">
+          <h3 style="color:#FFFFFF; font-size:16px; font-weight:500;">Comparison Workspace — Dual Engine Run</h3>
+          <span class="status-pill status-pill--dark">Benchmarking Latency &amp; Cost</span>
+        </div>
+        <div class="war-mode-grid">
+          <!-- Model A Column -->
+          <div class="model-box">
+            <div class="model-box-header">
+              <span class="model-name">Standard Baseline (Unamplified)</span>
+              <span class="metric-tag">Tokens: 1,840 · 3.2s</span>
+            </div>
+            <p style="font-size:13.5px; color:#A6B4BE; line-height:1.6;">
+              Customers mentioned issues with the getting started experience. They also commented on how fast the tool answers questions, and requested more file export buttons in the UI settings.
+            </p>
+            <div style="margin-top:16px; padding:10px; background:rgba(255,255,255,0.03); border-radius:6px; font-size:12px; color:#85929D;">
+              No constraint verification · Redundant reasoning cycles detected
+            </div>
+          </div>
+
+          <!-- Model B Column (DSRT Noitra Amplified) -->
+          <div class="model-box" style="border-color: rgba(63, 224, 208, 0.3); background: rgba(63, 224, 208, 0.02);">
+            <div class="model-box-header">
+              <span class="model-name" style="color:#3FE0D0;">DSRT Noitra Amplified</span>
+              <span class="metric-tag" style="background:rgba(63,224,208,0.1); color:#3FE0D0;">Tokens: 520 (-71%) · 0.9s</span>
+            </div>
+            <p style="font-size:13.5px; color:#E2E8F0; line-height:1.6;">
+              Identified three key themes with quantifiable frequency: <strong>onboarding clarity</strong> (42%), <strong>response speed</strong> (31%), and <strong>export flexibility</strong> (27%). Verified against source documents with complete evidence retention.
+            </p>
+            <div style="margin-top:16px; padding:10px; background:rgba(63,224,208,0.08); border-radius:6px; font-size:12px; color:#95EFE7;">
+              Bounded refinement verified · 0 ungrounded assumptions
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     05 · NOITRA V4 ENGINE & ARCHITECTURE
+     ============================================================ -->
+<section class="section" id="noitra">
+  <div class="container grid-12">
+    <div style="grid-column: 1 / span 5;">
+      <p class="eyebrow eyebrow-accent">NOITRA V4 <span class="status-pill">In development</span></p>
+      <h2 class="section-title">Intelligence amplification, engineered across the task lifecycle.</h2>
+      <p class="section-lede">
+        Noitra V4 is being developed to improve the useful work obtained from AI systems. Rather than treating a request as a single prompt, the engine is designed to understand the objective, prepare relevant context, select an appropriate execution strategy, and verify the resulting work.
+      </p>
+      <p style="color:var(--dsrt-secondary); font-size:15px;">
+        Computational efficiency is evaluated alongside task quality, not in isolation.
+      </p>
+      <div style="margin-top:28px;">
+        <a class="btn btn--primary" href="#lifecycle">Explore the 6-stage lifecycle</a>
+      </div>
+    </div>
+
+    <!-- Solid Abstract Engine Visual -->
+    <div style="grid-column: 7 / span 6;">
+      <div style="background:#FAFCFA; border:1px solid var(--dsrt-border); border-radius:12px; padding:28px; box-shadow:0 8px 30px rgba(0,0,0,0.03);">
+        <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Noitra V4 6-stage execution planes">
+          <defs>
+            <linearGradient id="planeGrad1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#E8EEE9"/></linearGradient>
+            <linearGradient id="planeGrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#F3F5F0"/></linearGradient>
+          </defs>
+          <!-- Central spine line -->
+          <line x1="350" y1="20" x2="350" y2="390" stroke="#16181B" stroke-width="2" stroke-linecap="round"/>
+
+          <!-- Stage 1 -->
+          <polygon points="350,25 510,50 350,75 190,50" fill="url(#planeGrad1)" stroke="#16181B" stroke-width="1.5"/>
+          <circle cx="350" cy="50" r="6" fill="#16181B"/>
+          <text x="170" y="55" text-anchor="end" font-family="'Lexend', sans-serif" font-size="12" font-weight="600" fill="#5F6870" letter-spacing="1">01 · UNDERSTAND</text>
+
+          <!-- Stage 2 -->
+          <polygon points="350,85 510,110 350,135 190,110" fill="url(#planeGrad2)" stroke="#16181B" stroke-width="1.5"/>
+          <circle cx="350" cy="110" r="6" fill="#16181B"/>
+          <text x="170" y="115" text-anchor="end" font-family="'Lexend', sans-serif" font-size="12" font-weight="600" fill="#5F6870" letter-spacing="1">02 · PREPARE</text>
+
+          <!-- Stage 3 -->
+          <polygon points="350,145 510,170 350,195 190,170" fill="url(#planeGrad1)" stroke="#16181B" stroke-width="1.5"/>
+          <circle cx="350" cy="170" r="6" fill="#16181B"/>
+          <text x="170" y="175" text-anchor="end" font-family="'Lexend', sans-serif" font-size="12" font-weight="600" fill="#5F6870" letter-spacing="1">03 · REASON</text>
+
+          <!-- Stage 4 -->
+          <polygon points="350,205 510,230 350,255 190,230" fill="url(#planeGrad2)" stroke="#16181B" stroke-width="1.5"/>
+          <circle cx="350" cy="230" r="6" fill="#16181B"/>
+          <text x="170" y="235" text-anchor="end" font-family="'Lexend', sans-serif" font-size="12" font-weight="600" fill="#5F6870" letter-spacing="1">04 · EXECUTE</text>
+
+          <!-- Stage 5 -->
+          <polygon points="350,265 510,290 350,315 190,290" fill="url(#planeGrad1)" stroke="#16181B" stroke-width="1.5"/>
+          <circle cx="350" cy="290" r="6" fill="#16181B"/>
+          <text x="170" y="295" text-anchor="end" font-family="'Lexend', sans-serif" font-size="12" font-weight="600" fill="#5F6870" letter-spacing="1">05 · VERIFY</text>
+
+          <!-- Stage 6 -->
+          <polygon points="350,325 510,350 350,375 190,350" fill="url(#planeGrad2)" stroke="#16181B" stroke-width="1.5"/>
+          <circle cx="350" cy="350" r="6" fill="#16181B"/>
+          <text x="170" y="355" text-anchor="end" font-family="'Lexend', sans-serif" font-size="12" font-weight="600" fill="#5F6870" letter-spacing="1">06 · DELIVER</text>
+
+          <!-- Feedback Refinement Curve -->
+          <path d="M 520 290 C 600 290, 600 170, 520 170" fill="none" stroke="#3E5463" stroke-width="2" stroke-dasharray="4 4"/>
+          <polygon points="522,166 512,170 522,174" fill="#3E5463"/>
+          <text x="610" y="234" font-family="'Lexend', sans-serif" font-size="11" font-weight="500" fill="#3E5463">Bounded Refinement</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 · 6-STAGE LIFECYCLE BREAKDOWN
+     ============================================================ -->
+<section class="section" id="lifecycle" style="background:#FFFFFF; border-top:1px solid var(--dsrt-border);">
+  <div class="container">
+    <div style="max-width:760px; margin-bottom:54px;">
+      <p class="eyebrow">HOW INTELLIGENCE IS DEVELOPED</p>
+      <h2 class="section-title">From request to verified work.</h2>
+      <p class="section-lede">
+        Each step operates under bounded execution constraints to prevent uncontrolled hallucinations, excessive token drift, or silent logic failure.
+      </p>
+    </div>
+
+    <div class="lifecycle-grid">
+      <div class="lifecycle-step-card">
+        <div class="step-number-tag">01 · UNDERSTAND</div>
+        <h3>Understand</h3>
+        <p>Identify primary objectives, environmental constraints, and deliverable schema.</p>
+      </div>
+
+      <div class="lifecycle-step-card">
+        <div class="step-number-tag">02 · PREPARE</div>
+        <h3>Prepare</h3>
+        <p>Organize authorized context, resolve dependencies, and enforce security boundaries.</p>
+      </div>
+
+      <div class="lifecycle-step-card">
+        <div class="step-number-tag">03 · REASON</div>
+        <h3>Reason</h3>
+        <p>Determine whether task decomposition, specific tools, or sub-models are required.</p>
+      </div>
+
+      <div class="lifecycle-step-card">
+        <div class="step-number-tag">04 · EXECUTE</div>
+        <h3>Execute</h3>
+        <p>Perform targeted work using resource-matched, cost-efficient computing nodes.</p>
+      </div>
+
+      <div class="lifecycle-step-card">
+        <div class="step-number-tag">05 · VERIFY</div>
+        <h3>Verify</h3>
+        <p>Audit output against original objectives. Trigger bounded correction if required.</p>
+      </div>
+
+      <div class="lifecycle-step-card">
+        <div class="step-number-tag">06 · DELIVER</div>
+        <h3>Deliver</h3>
+        <p>Return verified result with complete traceable execution and audit evidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     07 · SOLID ABSTRACT APPLICATIONS (Screenshot 2 Inspired Cards)
+     ============================================================ -->
+<section class="section" id="applications" style="background:var(--dsrt-paper);">
+  <div class="container">
+    <div style="max-width:760px; margin-bottom:48px;">
+      <p class="eyebrow eyebrow-accent">ABSTRACT ARCHITECTURES</p>
+      <h2 class="section-title">Engineered for dependable business tasks.</h2>
+      <p class="section-lede">
+        Illustrative system topologies — bridging models with strict organisational requirements.
+      </p>
+    </div>
+
+    <div class="grid-12">
+      <!-- Card 1: Enterprise Knowledge (Matching Screenshot 2 Left Side) -->
+      <div style="grid-column: 1 / span 6;">
+        <article class="diagram-card">
+          <div class="diagram-media-frame">
+            <!-- Exact Screenshot 2 SVG Diagram: Authorised Context Tree -->
+            <svg viewBox="0 0 540 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Authorised Context Architecture">
+              <!-- Top Node: Authorised Context -->
+              <rect x="180" y="24" width="180" height="42" rx="6" fill="#F0F2F0" stroke="#17191C" stroke-width="1.5"/>
+              <text x="270" y="50" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="13" font-weight="600" fill="#17191C">Authorised context</text>
+
+              <!-- Tree Trunk and Horizontal Bus -->
+              <line x1="270" y1="66" x2="270" y2="95" stroke="#17191C" stroke-width="1.5"/>
+              <line x1="90" y1="95" x2="450" y2="95" stroke="#17191C" stroke-width="1.5"/>
+
+              <!-- Drop lines -->
+              <line x1="90" y1="95" x2="90" y2="120" stroke="#17191C" stroke-width="1.5"/>
+              <line x1="270" y1="95" x2="270" y2="120" stroke="#17191C" stroke-width="1.5"/>
+              <line x1="450" y1="95" x2="450" y2="120" stroke="#17191C" stroke-width="1.5"/>
+
+              <!-- Small 'read' status badges -->
+              <rect x="68" y="105" width="44" height="18" rx="4" fill="#FFFFFF" stroke="#3E5463" stroke-width="1.2"/>
+              <text x="90" y="118" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="10" font-weight="500" fill="#3E5463">read</text>
+
+              <rect x="248" y="105" width="44" height="18" rx="4" fill="#FFFFFF" stroke="#3E5463" stroke-width="1.2"/>
+              <text x="270" y="118" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="10" font-weight="500" fill="#3E5463">read</text>
+
+              <rect x="428" y="105" width="44" height="18" rx="4" fill="#FFFFFF" stroke="#3E5463" stroke-width="1.2"/>
+              <text x="450" y="118" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="10" font-weight="500" fill="#3E5463">read</text>
+
+              <!-- 3 Target Nodes -->
+              <!-- Box 1 -->
+              <rect x="20" y="130" width="140" height="70" rx="6" fill="#FBFBFB" stroke="#17191C" stroke-width="1.5"/>
+              <text x="90" y="154" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="11.5" font-weight="600" fill="#17191C">Approved sources</text>
+              <rect x="35" y="166" width="110" height="6" rx="3" fill="#DCE1DE"/>
+              <rect x="35" y="178" width="80" height="6" rx="3" fill="#DCE1DE"/>
+
+              <!-- Box 2 -->
+              <rect x="200" y="130" width="140" height="70" rx="6" fill="#FBFBFB" stroke="#17191C" stroke-width="1.5"/>
+              <text x="270" y="154" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="11.5" font-weight="600" fill="#17191C">Org knowledge base</text>
+              <rect x="215" y="166" width="110" height="6" rx="3" fill="#DCE1DE"/>
+              <rect x="215" y="178" width="85" height="6" rx="3" fill="#DCE1DE"/>
+
+              <!-- Box 3 -->
+              <rect x="380" y="130" width="140" height="70" rx="6" fill="#FBFBFB" stroke="#17191C" stroke-width="1.5"/>
+              <text x="450" y="154" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="11.5" font-weight="600" fill="#17191C">Document collections</text>
+              <rect x="395" y="166" width="110" height="6" rx="3" fill="#DCE1DE"/>
+              <rect x="395" y="178" width="70" height="6" rx="3" fill="#DCE1DE"/>
+
+              <!-- Bottom divider & microcopy -->
+              <line x1="20" y1="225" x2="520" y2="225" stroke="#E3E6E4" stroke-width="1"/>
+              <text x="20" y="246" font-family="'Lexend', sans-serif" font-size="10.5" fill="#6A7379">Only context the caller is authorised to use is connected.</text>
+              <text x="20" y="262" font-family="'Lexend', sans-serif" font-size="10.5" fill="#6A7379">Access boundaries are defined per collection, not per prompt.</text>
+            </svg>
+          </div>
+
+          <div class="diagram-content">
+            <h3>Enterprise knowledge</h3>
+            <p>Work with authorised organizational context, live corporate APIs, and isolated document collections.</p>
+            <p class="diagram-example">
+              <strong>Example:</strong> Answer questions over an authorised internal handbook, strictly bounded within defined team access scopes.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 2: Business Operations (Matching Screenshot 2 Right Side) -->
+      <div style="grid-column: 7 / span 6;">
+        <article class="diagram-card">
+          <div class="diagram-media-frame">
+            <!-- Exact Screenshot 2 SVG Diagram: 3-Stage Pipeline (Input -> Review -> Completion) -->
+            <svg viewBox="0 0 540 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Business Operations 3-Stage Workflow">
+              <defs>
+                <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M 0 1 L 8 5 L 0 9 z" fill="#17191C"/>
+                </marker>
+              </defs>
+
+              <!-- Step Labels -->
+              <text x="85" y="38" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="11" font-weight="600" fill="#758088" letter-spacing="1">01 · INPUT</text>
+              <text x="270" y="38" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="11" font-weight="600" fill="#758088" letter-spacing="1">02 · REVIEW</text>
+              <text x="455" y="38" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="11" font-weight="600" fill="#758088" letter-spacing="1">03 · COMPLETION</text>
+
+              <!-- Stage 1 Box: Form with checkboxes -->
+              <rect x="25" y="55" width="120" height="130" rx="6" fill="#FBFBFB" stroke="#17191C" stroke-width="1.5"/>
+              <rect x="40" y="78" width="12" height="12" rx="2" fill="#FFFFFF" stroke="#17191C" stroke-width="1.2"/>
+              <rect x="60" y="82" width="70" height="5" rx="2.5" fill="#CAD2CD"/>
+
+              <rect x="40" y="104" width="12" height="12" rx="2" fill="#FFFFFF" stroke="#17191C" stroke-width="1.2"/>
+              <rect x="60" y="108" width="55" height="5" rx="2.5" fill="#CAD2CD"/>
+
+              <rect x="40" y="130" width="12" height="12" rx="2" fill="#FFFFFF" stroke="#17191C" stroke-width="1.2"/>
+              <rect x="60" y="134" width="72" height="5" rx="2.5" fill="#CAD2CD"/>
+
+              <!-- Connector Arrow 1 -->
+              <line x1="155" y1="120" x2="195" y2="120" stroke="#17191C" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+              <!-- Stage 2 Box: Review with circle badge -->
+              <rect x="210" y="55" width="120" height="130" rx="6" fill="#FFFFFF" stroke="#17191C" stroke-width="1.5"/>
+              <circle cx="245" cy="100" r="14" fill="#FFFFFF" stroke="#17191C" stroke-width="1.5"/>
+              <path d="M 239 100 L 243 104 L 251 96" fill="none" stroke="#3E5463" stroke-width="2" stroke-linecap="round"/>
+              <rect x="270" y="98" width="45" height="5" rx="2.5" fill="#CAD2CD"/>
+              <rect x="230" y="132" width="80" height="5" rx="2.5" fill="#E2E7E4"/>
+              <rect x="230" y="144" width="60" height="5" rx="2.5" fill="#E2E7E4"/>
+
+              <!-- Connector Arrow 2 -->
+              <line x1="340" y1="120" x2="380" y2="120" stroke="#17191C" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+              <!-- Stage 3 Box: Final signed sheet -->
+              <rect x="395" y="55" width="120" height="130" rx="6" fill="#FBFBFB" stroke="#17191C" stroke-width="1.5"/>
+              <rect x="415" y="80" width="80" height="55" rx="4" fill="#FFFFFF" stroke="#17191C" stroke-width="1.2"/>
+              <rect x="425" y="94" width="55" height="5" rx="2.5" fill="#CAD2CD"/>
+              <circle cx="485" cy="130" r="10" fill="#FFFFFF" stroke="#17191C" stroke-width="1.2"/>
+              <path d="M 481 130 L 484 133 L 489 127" fill="none" stroke="#3E5463" stroke-width="1.5" stroke-linecap="round"/>
+
+              <!-- Bottom caption -->
+              <text x="270" y="235" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="11.5" fill="#6A7379">
+                Repeatable tasks run with defined inputs, constraints and review steps.
+              </text>
+            </svg>
+          </div>
+
+          <div class="diagram-content">
+            <h3>Business operations</h3>
+            <p>Support deterministic operational tasks with structured input schemas, automated review gates, and final completion locks.</p>
+            <p class="diagram-example">
+              <strong>Example:</strong> Run a recurring financial reconciliation task with bounded context and explicit human-in-the-loop signoff.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     08 · COCO SOFTWARE ENGINEERING WORKSPACE (Screenshot 3 Reference)
+     ============================================================ -->
+<section class="section" id="coco" style="background:#FFFFFF;">
+  <div class="container">
+    <div class="coco-split">
+      <div>
+        <p class="eyebrow">COCO <span class="status-pill">Concept preview</span></p>
+        <h2 class="section-title">Software engineering, supported by intelligence.</h2>
+        <p class="section-lede">
+          Coco is a DSRT AI software engineering workspace concept intended to support developers across code understanding, planning, implementation, and verification.
+        </p>
+        <p style="color:var(--dsrt-secondary); font-size:15px; margin-bottom:28px;">
+          Its capabilities and availability will be published as development progresses. Designed with native macOS performance standards.
+        </p>
+        <a class="btn btn--primary" href="#access">Follow developer updates</a>
+      </div>
+
+      <!-- Conceptual macOS IDE Frame (Reference 3) -->
+      <div class="macos-window" style="background:#FFFFFF; border:1px solid #D5DBD8; box-shadow:0 18px 45px rgba(0,0,0,0.06);">
+        <!-- Titlebar -->
+        <div class="macos-titlebar" style="background:#F2F4F2; border-bottom:1px solid #E1E6E2;">
+          <div class="macos-traffic-lights">
+            <span class="traffic-dot traffic-dot--red"></span>
+            <span class="traffic-dot traffic-dot--yellow"></span>
+            <span class="traffic-dot traffic-dot--green"></span>
+          </div>
+          <div class="macos-title-center" style="color:#4B555D;">
+            <span style="font-family:var(--dsrt-mono); font-size:11.5px;">coco — software engineering workspace</span>
+          </div>
+          <div class="macos-title-actions">
+            <span class="badge-mode-pill" style="background:#E2E8E4; color:#232B30; border-color:#CCD5D0;">CONCEPT PREVIEW</span>
+          </div>
+        </div>
+
+        <!-- IDE 3-Column Body -->
+        <div class="coco-ide-preview">
+          <!-- Tree -->
+          <div class="coco-col-tree">
+            <div class="tree-title">FILES</div>
+            <div class="tree-item">src/</div>
+            <div class="tree-item" style="padding-left:14px;">core/</div>
+            <div class="tree-item is-active" style="padding-left:22px;">noitra.ts</div>
+            <div class="tree-item" style="padding-left:14px;">plan.md</div>
+            <div class="tree-item">tests/</div>
+            <div class="tree-item" style="padding-left:14px;">verify.test.ts</div>
+          </div>
+
+          <!-- Editor -->
+          <div class="coco-col-editor">
+            <div class="editor-line-skeleton" style="width:55%;"></div>
+            <div class="editor-line-skeleton" style="width:78%;"></div>
+            <div class="editor-line-skeleton" style="width:62%;"></div>
+
+            <!-- Focused active selection box (like Screenshot 3) -->
+            <div class="editor-highlight-box">
+              <div class="editor-highlight-line"></div>
+            </div>
+
+            <div class="editor-line-skeleton" style="width:85%;"></div>
+            <div class="editor-line-skeleton" style="width:70%;"></div>
+            <div class="editor-line-skeleton" style="width:40%;"></div>
+          </div>
+
+          <!-- Task Plan & Review -->
+          <div class="coco-col-plan">
+            <div class="tree-title">TASK PLAN</div>
+            <div class="plan-item">
+              <span class="plan-check plan-check--done">&check;</span>
+              <span>Parse AST</span>
+            </div>
+            <div class="plan-item">
+              <span class="plan-check plan-check--done">&check;</span>
+              <span>Resolve imports</span>
+            </div>
+            <div class="plan-item">
+              <span class="plan-check"></span>
+              <span>Type safety pass</span>
+            </div>
+            <div class="plan-item">
+              <span class="plan-check"></span>
+              <span>Refactor bounds</span>
+            </div>
+
+            <div class="tree-title" style="margin-top:10px;">REVIEW</div>
+            <div style="background:#F0F4F2; border:1px solid #D1DDD6; border-radius:6px; padding:10px; font-size:11.5px; color:#49565F;">
+              Review note: verify no circular dependency in noitra.ts before check-in.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     09 · COMPUTATIONAL EFFICIENCY (Screenshot 4 Reference)
+     ============================================================ -->
+<section class="section" id="efficiency" style="background:#FAFCFA; border-top:1px solid var(--dsrt-border);">
+  <div class="container">
+    <div class="efficiency-split">
+      <div>
+        <p class="eyebrow eyebrow-accent">COMPUTATIONAL EFFICIENCY</p>
+        <h2 class="section-title">More useful work from computational resources.</h2>
+        <p class="section-lede">
+          DSRT AI evaluates intelligence efficiency through task completion, quality, and resource consumption. Noitra is designed to reduce unnecessary computation while allowing additional reasoning or verification when it materially improves the result.
+        </p>
+      </div>
+
+      <!-- Solid Schematic Card (Screenshot 4 Reference) -->
+      <div>
+        <div class="efficiency-card">
+          <svg viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Conventional vs Amplified Execution Waveforms">
+            <!-- Top row: Conventional -->
+            <text x="30" y="65" font-family="'Lexend', sans-serif" font-size="11.5" font-weight="600" fill="#6A7780" letter-spacing="1">CONVENTIONAL</text>
+
+            <!-- Redundant zig-zag wave -->
+            <polyline points="150,75 190,40 230,80 270,45 310,80 350,42 390,78 430,46 470,75" fill="none" stroke="#16181B" stroke-width="1.8" stroke-linecap="round"/>
+
+            <!-- Result Box 1 -->
+            <rect x="490" y="52" width="85" height="38" rx="6" fill="#F1F4F2" stroke="#16181B" stroke-width="1.5"/>
+            <text x="532" y="76" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="12" font-weight="500" fill="#16181B">Result</text>
+
+            <!-- Middle dividing rule -->
+            <line x1="30" y1="140" x2="590" y2="140" stroke="#E6EAE7" stroke-width="1"/>
+
+            <!-- Bottom row: Amplified -->
+            <text x="30" y="215" font-family="'Lexend', sans-serif" font-size="11.5" font-weight="600" fill="#6A7780" letter-spacing="1">AMPLIFIED</text>
+
+            <!-- Smooth direct curve -->
+            <path d="M 150 220 L 330 220 Q 360 220 375 205" fill="none" stroke="#16181B" stroke-width="1.8" stroke-linecap="round"/>
+
+            <!-- Verification check badge -->
+            <circle cx="395" cy="205" r="13" fill="#FFFFFF" stroke="#16181B" stroke-width="1.5"/>
+            <path d="M 390 205 L 393 209 L 401 201" fill="none" stroke="#3E5463" stroke-width="2" stroke-linecap="round"/>
+            <text x="395" y="235" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="10.5" font-weight="500" fill="#5F6D75">verify</text>
+
+            <!-- Lead out to result -->
+            <line x1="408" y1="205" x2="470" y2="205" stroke="#16181B" stroke-width="1.8" stroke-linecap="round"/>
+
+            <!-- Omitted steps indicator -->
+            <line x1="370" y1="172" x2="470" y2="172" stroke="#A7B5AE" stroke-width="1" stroke-dasharray="3 3"/>
+            <text x="420" y="162" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="10" fill="#7B8C85">omitted steps</text>
+
+            <!-- Result Box 2 -->
+            <rect x="490" y="186" width="85" height="38" rx="6" fill="#F1F4F2" stroke="#16181B" stroke-width="1.5"/>
+            <text x="532" y="210" text-anchor="middle" font-family="'Lexend', sans-serif" font-size="12" font-weight="500" fill="#16181B">Result</text>
+          </svg>
+        </div>
+        <p style="font-size:12.5px; color:#7E8B92; margin-top:12px; text-align:right;">Conceptual illustration, not benchmark data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10 · DSRT LABS (Screenshot 5 Reference)
+     ============================================================ -->
+<section class="section" id="labs" style="background:#FFFFFF;">
+  <div class="container">
+    <div class="labs-split">
+      <div>
+        <p class="eyebrow">DSRT LABS</p>
+        <h2 class="section-title">Research that informs engineering.</h2>
+        <p class="section-lede">
+          DSRT Labs investigates intelligence efficiency, evaluation methods, computational behaviour, and the engineering systems required to build dependable AI applications. Research findings and technical publications will be shared when ready for release.
+        </p>
+        <div style="margin-top:28px;">
+          <!-- Pill button per Screenshot 5 -->
+          <a class="btn btn--white" href="#resources" style="border-radius:6px;">Browse technical resources</a>
+        </div>
+      </div>
+
+      <!-- Solid Research Coordinate Diagram (Screenshot 5 Reference) -->
+      <div>
+        <div style="border:1px solid var(--dsrt-border); border-radius:12px; background:#FFFFFF; padding:28px; box-shadow:0 4px 20px rgba(0,0,0,0.02);">
+          <svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Research Coordinate Grid with Experiment Nodes">
+            <!-- Background Grid lines -->
+            <g stroke="#E8EDE9" stroke-width="1">
+              <line x1="80" y1="40" x2="80" y2="300"/>
+              <line x1="160" y1="40" x2="160" y2="300"/>
+              <line x1="240" y1="40" x2="240" y2="300"/>
+              <line x1="320" y1="40" x2="320" y2="300"/>
+              <line x1="400" y1="40" x2="400" y2="300"/>
+              <line x1="480" y1="40" x2="480" y2="300"/>
+              <line x1="560" y1="40" x2="560" y2="300"/>
+
+              <line x1="40" y1="80" x2="580" y2="80"/>
+              <line x1="40" y1="140" x2="580" y2="140"/>
+              <line x1="40" y1="200" x2="580" y2="200"/>
+              <line x1="40" y1="260" x2="580" y2="260"/>
+            </g>
+
+            <!-- Box 1: evaluation runs -->
+            <rect x="150" y="70" width="105" height="70" rx="6" fill="#EFF3F0" stroke="#17191C" stroke-width="1.5"/>
+            <text x="165" y="148" font-family="'Lexend', sans-serif" font-size="10.5" fill="#5F6D75">evaluation runs</text>
+
+            <!-- Box 2: efficiency studies -->
+            <rect x="340" y="170" width="105" height="70" rx="6" fill="#F4F6F1" stroke="#17191C" stroke-width="1.5"/>
+            <text x="350" y="248" font-family="'Lexend', sans-serif" font-size="10.5" fill="#5F6D75">efficiency studies</text>
+
+            <!-- Box 3: systems work -->
+            <rect x="500" y="70" width="85" height="55" rx="6" fill="#EFF3F0" stroke="#17191C" stroke-width="1.5"/>
+            <text x="505" y="136" font-family="'Lexend', sans-serif" font-size="10.5" fill="#5F6D75">systems work</text>
+
+            <!-- Trend Polyline -->
+            <polyline points="150,230 270,180 400,200 520,110 590,85" fill="none" stroke="#3E5463" stroke-width="1.8"/>
+
+            <!-- Node Points -->
+            <circle cx="150" cy="230" r="4.5" fill="#17191C"/>
+            <circle cx="270" cy="180" r="4.5" fill="#17191C"/>
+            <circle cx="400" cy="200" r="4.5" fill="#17191C"/>
+            <circle cx="520" cy="110" r="4.5" fill="#17191C"/>
+            <circle cx="590" cy="85" r="4.5" fill="#17191C"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11 · BUILD & PROGRAMMATIC API (Dark macOS Code Studio)
+     ============================================================ -->
+<section class="section" id="build" style="background:#0F1214; color:#FFFFFF;">
+  <div class="container grid-12">
+    <div style="grid-column: 1 / span 5;">
+      <p class="eyebrow eyebrow-light">DEVELOPER INTERFACES</p>
+      <h2 class="section-title section-title--dark">Intelligence for your own applications.</h2>
+      <p class="section-lede section-lede--dark">
+        The planned DSRT developer interfaces are intended to let software teams submit tasks, specify context constraints, and receive results along with full execution audit evidence.
+      </p>
+
+      <ul style="list-style:none; padding:0; margin:28px 0 0; display:flex; flex-direction:column; gap:16px;">
+        <li style="border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:12px;">
+          <strong style="color:#FFF;">TypeScript SDK</strong> — Native types and verified async stream handlers.
+        </li>
+        <li style="border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:12px;">
+          <strong style="color:#FFF;">Python Client</strong> — Research, automated evaluation notebooks, and pipelines.
+        </li>
+        <li>
+          <strong style="color:#FFF;">REST JSON Endpoints</strong> — Microservice integration for any language stack.
+        </li>
+      </ul>
+    </div>
+
+    <!-- macOS Terminal / Code Panel -->
+    <div style="grid-column: 6 / span 7;">
+      <div class="code-studio-panel">
+        <div class="code-studio-bar">
+          <div class="code-lang-tabs" role="tablist">
+            <button class="code-tab-btn is-active" type="button" role="tab" id="tab-btn-ts" aria-selected="true" onclick="switchCodeSnippet('ts')">TypeScript</button>
+            <button class="code-tab-btn" type="button" role="tab" id="tab-btn-py" aria-selected="false" onclick="switchCodeSnippet('py')">Python</button>
+            <button class="code-tab-btn" type="button" role="tab" id="tab-btn-rest" aria-selected="false" onclick="switchCodeSnippet('rest')">cURL / REST</button>
+          </div>
+          <button class="copy-code-btn" type="button" id="copy-btn" onclick="copyCurrentCode()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span id="copy-btn-text">Copy</span>
+          </button>
+        </div>
+
+        <!-- TypeScript Code -->
+        <pre class="code-pre-box" id="code-snippet-ts"><code><span class="tok-kw">import</span> { DsrtClient } <span class="tok-kw">from</span> <span class="tok-str">"@dsrt/sdk"</span>;
+
+<span class="tok-kw">const</span> dsrt = <span class="tok-kw">new</span> DsrtClient({ apiKey: process.env.DSRT_API_KEY });
+
+<span class="tok-kw">const</span> session = <span class="tok-kw">await</span> dsrt.tasks.execute({
+  <span class="tok-prop">task</span>: <span class="tok-str">"Summarise the supplied financial audit"</span>,
+  <span class="tok-prop">context</span>: {
+    <span class="tok-prop">documentIds</span>: [<span class="tok-str">"doc_q4_2025_signed"</span>],
+    <span class="tok-prop">scope</span>: <span class="tok-str">"finance-internal-restricted"</span>
+  },
+  <span class="tok-prop">constraints</span>: {
+    <span class="tok-prop">preserveFacts</span>: <span class="tok-kw">true</span>,
+    <span class="tok-prop">maxRefinementLoops</span>: <span class="tok-num">2</span>
+  },
+  <span class="tok-prop">verification</span>: <span class="tok-str">"strict"</span>
+});
+
+console.log(session.output.verifiedSummary);
+console.log(session.audit.evidenceCount); <span class="tok-comm">// Full provenance trail</span></code></pre>
+
+        <!-- Python Code -->
+        <pre class="code-pre-box" id="code-snippet-py" style="display:none;"><code><span class="tok-kw">from</span> dsrt <span class="tok-kw">import</span> DsrtClient
+
+client = DsrtClient()
+
+response = client.tasks.execute(
+    task=<span class="tok-str">"Summarise the supplied financial audit"</span>,
+    context={
+        <span class="tok-str">"document_ids"</span>: [<span class="tok-str">"doc_q4_2025_signed"</span>],
+        <span class="tok-str">"scope"</span>: <span class="tok-str">"finance-internal-restricted"</span>
+    },
+    constraints={
+        <span class="tok-str">"preserve_facts"</span>: <span class="tok-kw">True</span>,
+        <span class="tok-str">"max_refinement_loops"</span>: <span class="tok-num">2</span>
+    },
+    verification=<span class="tok-str">"strict"</span>
+)
+
+print(response.verified_summary)</code></pre>
+
+        <!-- REST Code -->
+        <pre class="code-pre-box" id="code-snippet-rest" style="display:none;"><code>curl -X POST https://api.dsrt.ai/v1/tasks/execute \
+  -H <span class="tok-str">"Authorization: Bearer $DSRT_API_KEY"</span> \
+  -H <span class="tok-str">"Content-Type: application/json"</span> \
+  -d <span class="tok-str">'{
+    "task": "Summarise the supplied financial audit",
+    "context": {
+      "documentIds": ["doc_q4_2025_signed"]
+    },
+    "verification": "strict"
+  }'</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     12 · TECHNICAL RESOURCES DIRECTORY
+     ============================================================ -->
+<section class="section" id="resources" style="background:#FFFFFF;">
+  <div class="container">
+    <div style="max-width:760px; margin-bottom:48px;">
+      <p class="eyebrow">DOCUMENTATION &amp; SPECIFICATIONS</p>
+      <h2 class="section-title">Technical resources.</h2>
+    </div>
+
+    <div style="border-top:1px solid var(--dsrt-border);">
+      <!-- Row 1 -->
+      <a href="#noitra" style="display:flex; justify-content:space-between; align-items:center; padding:22px 0; border-bottom:1px solid var(--dsrt-border);">
+        <div>
+          <h3 style="font-size:18px; font-weight:600; margin-bottom:4px;">Architecture and concepts</h3>
+          <p style="color:var(--dsrt-secondary); font-size:14px; margin:0;">Understand how intelligence amplification is engineered across the task lifecycle.</p>
+        </div>
+        <span class="status-pill status-pill--active">Published</span>
+      </a>
+
+      <!-- Row 2 -->
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:22px 0; border-bottom:1px solid var(--dsrt-border);">
+        <div>
+          <h3 style="font-size:18px; font-weight:600; margin-bottom:4px; color:#6B7780;">API Reference</h3>
+          <p style="color:#8A96A0; font-size:14px; margin:0;">Programmatic endpoint specifications, authentication schemas, and rate limits.</p>
+        </div>
+        <span class="status-pill">Planned</span>
+      </div>
+
+      <!-- Row 3 -->
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:22px 0; border-bottom:1px solid var(--dsrt-border);">
+        <div>
+          <h3 style="font-size:18px; font-weight:600; margin-bottom:4px; color:#6B7780;">SDK Guides (TypeScript &amp; Python)</h3>
+          <p style="color:#8A96A0; font-size:14px; margin:0;">Starter repos, sample notebooks, and streaming client documentation.</p>
+        </div>
+        <span class="status-pill">Planned</span>
+      </div>
+
+      <!-- Row 4 -->
+      <a href="#efficiency" style="display:flex; justify-content:space-between; align-items:center; padding:22px 0; border-bottom:1px solid var(--dsrt-border);">
+        <div>
+          <h3 style="font-size:18px; font-weight:600; margin-bottom:4px;">Evaluation methodology</h3>
+          <p style="color:var(--dsrt-secondary); font-size:14px; margin:0;">How task success, total execution cost, and evidence retention are measured.</p>
+        </div>
+        <span class="status-pill status-pill--active">Published</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     13 · ACCESS CTA (Refined Dark Container)
+     ============================================================ -->
+<section class="section" id="access" style="background:#F4F6F4;">
+  <div class="container">
+    <div class="access-hero-card">
+      <p class="eyebrow eyebrow-light">DEVELOPER ACCESS</p>
+      <h2 style="font-size:clamp(32px, 4vw, 52px); font-weight:550; color:#FFFFFF; margin-bottom:18px; letter-spacing:-0.03em;">
+        Build with DSRT AI.
+      </h2>
+      <p style="font-size:17px; color:#A7B6BF; max-width:58ch; margin:0 auto 32px; line-height:1.6;">
+        Register your interest in developer preview access and tell us what you intend to build. We will share availability, early tokens, and SDK updates as the platform develops.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn--white" href="mailto:developers@dsrt.ai?subject=DSRT%20Developer%20Access%20Request">Contact the developer team</a>
+        <a class="btn btn--ghost-dark" href="#overview">Back to overview</a>
+      </div>
+
+      <p style="font-size:12.5px; color:#6E7B84; margin-top:32px;">
+        Developer onboarding opens in phases. Production API keys are not issued directly from this preview form.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     14 · GLOBAL FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-title">DSRT AI</div>
+        <p style="font-size:14px; line-height:1.6; max-width:32ch;">
+          Intelligence technology, macOS productivity workspaces, and enterprise amplification software.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>DEVELOPERS</h4>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#workspaces">Workspaces</a></li>
+          <li><a href="#noitra">Noitra Engine</a></li>
+          <li><a href="#build">API Reference</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>PLATFORM</h4>
+        <ul>
+          <li><a href="#coco">Coco Studio</a></li>
+          <li><a href="#efficiency">Efficiency</a></li>
+          <li><a href="#labs">DSRT Labs</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#access">Developer access</a></li>
+          <li><a href="mailto:developers@dsrt.ai">Contact</a></li>
+          <li><a href="#">Security &amp; Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <span>&copy; 2026 DSRT AI Inc. All rights reserved.</span>
+      <div style="display:flex; gap:20px;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Security Overview</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     VANILLA JS: INTERACTIONS, TABS & OBSERVERS
+     ============================================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // --- 1. Mobile Menu Drawer Toggle ---
+  const mobileToggle = document.querySelector('.mobile-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+
+  if (mobileToggle && mobileDrawer) {
+    mobileToggle.addEventListener('click', function() {
+      const isOpen = mobileDrawer.classList.toggle('is-open');
+      mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    mobileDrawer.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') {
+        mobileDrawer.classList.remove('is-open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // --- 2. macOS Workspace Switcher (Work Mode vs War Mode) ---
+  const btnWorkMode = document.getElementById('btn-show-workmode');
+  const btnWarMode = document.getElementById('btn-show-warmode');
+  const viewWorkMode = document.getElementById('view-workmode');
+  const viewWarMode = document.getElementById('view-warmode');
+  const crumbLabel = document.getElementById('window-crumb-label');
+  const badgeLabel = document.getElementById('window-badge-label');
+
+  if (btnWorkMode && btnWarMode && viewWorkMode && viewWarMode) {
+    btnWorkMode.addEventListener('click', function() {
+      btnWorkMode.classList.add('is-active');
+      btnWarMode.classList.remove('is-active');
+      viewWorkMode.style.display = 'grid';
+      viewWarMode.style.display = 'none';
+      if (crumbLabel) crumbLabel.textContent = '/ Work Mode';
+      if (badgeLabel) badgeLabel.textContent = 'Work Mode';
+    });
+
+    btnWarMode.addEventListener('click', function() {
+      btnWarMode.classList.add('is-active');
+      btnWorkMode.classList.remove('is-active');
+      viewWorkMode.style.display = 'none';
+      viewWarMode.style.display = 'block';
+      if (crumbLabel) crumbLabel.textContent = '/ War Mode';
+      if (badgeLabel) badgeLabel.textContent = 'Model Comparison';
+    });
+  }
+
+  // --- 3. Code Studio Language Switcher ---
+  window.switchCodeSnippet = function(lang) {
+    const tabs = {
+      ts: document.getElementById('code-snippet-ts'),
+      py: document.getElementById('code-snippet-py'),
+      rest: document.getElementById('code-snippet-rest')
+    };
+    const buttons = {
+      ts: document.getElementById('tab-btn-ts'),
+      py: document.getElementById('tab-btn-py'),
+      rest: document.getElementById('tab-btn-rest')
+    };
+
+    for (let key in tabs) {
+      if (tabs[key]) tabs[key].style.display = (key === lang) ? 'block' : 'none';
+      if (buttons[key]) {
+        if (key === lang) {
+          buttons[key].classList.add('is-active');
+          buttons[key].setAttribute('aria-selected', 'true');
+        } else {
+          buttons[key].classList.remove('is-active');
+          buttons[key].setAttribute('aria-selected', 'false');
+        }
+      }
+    }
+  };
+
+  // --- 4. Copy Code Snippet ---
+  window.copyCurrentCode = function() {
+    const activeCode = document.querySelector('.code-pre-box[style*="block"], .code-pre-box:not([style*="none"]) code');
+    const text = activeCode ? activeCode.innerText : '';
+    const copyBtnText = document.getElementById('copy-btn-text');
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function() {
+        if (copyBtnText) copyBtnText.textContent = 'Copied!';
+        setTimeout(function() { if (copyBtnText) copyBtnText.textContent = 'Copy'; }, 2000);
+      });
+    } else {
+      alert('Code copied to clipboard.');
+    }
+  };
+
+  // --- 5. Active Subnav Tracking on Scroll ---
+  const subnavLinks = Array.from(document.querySelectorAll('.local-subnav-link'));
+  const trackedSections = subnavLinks.map(link => {
+    const href = link.getAttribute('href');
+    return href.startsWith('#') ? document.querySelector(href) : null;
+  }).filter(Boolean);
+
+  if ('IntersectionObserver' in window && trackedSections.length > 0) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          subnavLinks.forEach(link => {
+            const match = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('is-active', match);
+          });
+        }
+      });
+    }, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+
+    trackedSections.forEach(section => obs.observe(section));
+  }
+})();
+</script>
+
+</body>
+</html>
