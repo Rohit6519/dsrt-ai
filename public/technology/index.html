@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology | DSRT AI</title>
+  <meta name="description" content="Explore DSRT AI’s intelligence amplification, context intelligence, computational optimization and engineering systems.">
+  <link rel="canonical" href="https://www.dsrtai.com/technology/">
+  <link rel="icon" type="image/png" href="/assets/dsrt-logo.png">
+
+  <!-- Lexend Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --------------------------------------------------
+       DESIGN TOKENS & REPO ASSET PATHS
+       Hero Background Placeholder Path: /assets/hero-bg.jpg
+    -------------------------------------------------- */
+    :root {
+      --font-primary: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      
+      /* Core Palette */
+      --color-white: #FFFFFF;
+      --color-ink: #111111;
+      --color-secondary: #555555;
+      --color-neutral: #F7F8FA;
+      --color-neutral-subtle: #EEEEEE;
+      --color-border: #DADADA;
+      --color-navy: #182D42;
+      --color-navy-dark: #0F1D2C;
+      --color-accent-blue: #2563EB;
+      --color-success: #10B981;
+      
+      /* Matte Blackish-Grey Dark Palette */
+      --nav-bg: #121418;
+      --nav-border: #232730;
+      --surface-dark-base: #0B0D11;
+      --surface-dark-card: #13161F;
+      --surface-dark-elevated: #181C26;
+      --surface-dark-border: #232836;
+      
+      /* Layout & Spacing */
+      --max-width: 1280px;
+      --gutter: 64px;
+      --section-spacing: 104px;
+      
+      /* Assets */
+      --hero-bg-image: url('/assets/hero-bg.jpg');
+    }
+
+    /* --------------------------------------------------
+       RESET & BASE STYLES
+    -------------------------------------------------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--color-white);
+      color: var(--color-ink);
+      font-family: var(--font-primary);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--color-ink);
+      background-color: var(--color-white);
+      overflow-x: hidden;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    button, select, input {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    /* --------------------------------------------------
+       TYPOGRAPHY
+    -------------------------------------------------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-primary);
+      color: var(--color-ink);
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 1.12;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 42px;
+      line-height: 1.2;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--color-secondary);
+      margin-bottom: 20px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-navy);
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-dark {
+      color: #7DD3FC;
+    }
+
+    /* --------------------------------------------------
+       LAYOUT UTILITIES
+    -------------------------------------------------- */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+      width: 100%;
+    }
+
+    .section {
+      padding-top: var(--section-spacing);
+      padding-bottom: var(--section-spacing);
+      position: relative;
+    }
+
+    .section-bordered {
+      border-bottom: 1px solid var(--color-neutral-subtle);
+    }
+
+    .section-dark {
+      background-color: var(--surface-dark-base);
+      color: #E2E8F0;
+    }
+
+    .section-dark h2, .section-dark h3, .section-dark h4 {
+      color: var(--color-white);
+    }
+
+    .section-dark p {
+      color: #94A3B8;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 32px;
+    }
+
+    /* --------------------------------------------------
+       01 • GLOBAL NAVIGATION (Matte Blackish-Grey)
+    -------------------------------------------------- */
+    .global-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 76px;
+      background-color: var(--nav-bg);
+      border-bottom: 1px solid var(--nav-border);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--color-white);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 16px; /* Tightened gap between options */
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 400;
+      color: #9BA3AF;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-white);
+    }
+
+    .nav-link.active {
+      color: var(--color-white);
+      font-weight: 500;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-btn {
+      background-color: var(--color-white);
+      color: #0F172A;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      display: inline-block;
+    }
+
+    .nav-btn:hover {
+      background-color: #E2E8F0;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--nav-border);
+      color: var(--color-white);
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* --------------------------------------------------
+       02 • CONTINUOUS SCROLLING SUB-NAV (Pause on hover)
+    -------------------------------------------------- */
+    .subnav-bar {
+      background-color: #FAFAFA;
+      border-bottom: 1px solid var(--color-neutral-subtle);
+      position: sticky;
+      top: 76px;
+      z-index: 900;
+      overflow: hidden;
+      white-space: nowrap;
+      user-select: none;
+      mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    }
+
+    .subnav-track {
+      display: inline-flex;
+      gap: 12px;
+      padding: 10px 0;
+      animation: subnavScroll 36s linear infinite;
+      width: max-content;
+    }
+
+    .subnav-track:hover {
+      animation-play-state: paused;
+    }
+
+    .subnav-group {
+      display: inline-flex;
+      gap: 12px;
+    }
+
+    .subnav-link {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-secondary);
+      padding: 6px 16px;
+      border-radius: 20px;
+      background-color: transparent;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .subnav-link:hover, .subnav-link:focus {
+      color: var(--color-ink);
+      border-color: var(--color-border);
+      background-color: var(--color-white);
+    }
+
+    @keyframes subnavScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* --------------------------------------------------
+       03 • HERO SECTION (Center Aligned)
+    -------------------------------------------------- */
+    .hero-section {
+      padding-top: 80px;
+      padding-bottom: 90px;
+      text-align: center;
+      position: relative;
+      background-color: var(--color-white);
+      background-image: 
+        radial-gradient(circle at 50% 20%, rgba(24, 45, 66, 0.04) 0%, transparent 60%),
+        var(--hero-bg-image);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-size: 64px;
+      line-height: 1.12;
+      font-weight: 600;
+      margin-bottom: 24px;
+      color: var(--color-ink);
+    }
+
+    .hero-description {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--color-secondary);
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-navy);
+      color: var(--color-white);
+      font-weight: 500;
+      font-size: 15px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid var(--color-navy);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-navy-dark);
+      border-color: var(--color-navy-dark);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-white);
+      color: var(--color-ink);
+      font-weight: 500;
+      font-size: 15px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: 1px solid var(--color-border);
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--color-neutral);
+      border-color: #B5B5B5;
+    }
+
+    /* Hero SVG Visualization Box */
+    .hero-visual-card {
+      max-width: 980px;
+      margin: 0 auto;
+      background-color: var(--color-neutral);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: left;
+    }
+
+    .hero-visual-svg {
+      width: 100%;
+      height: auto;
+      max-height: 240px;
+    }
+
+    .hero-caption {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--color-secondary);
+      text-align: center;
+      font-style: normal;
+    }
+
+    /* Continuously Working Pipeline Animation */
+    .pulse-flow-line {
+      stroke-dasharray: 120 480;
+      stroke-dashoffset: 600;
+      animation: continuousFlow 3.2s linear infinite;
+    }
+
+    .pulse-flow-line-alt {
+      stroke-dasharray: 80 520;
+      stroke-dashoffset: 600;
+      animation: continuousFlow 3.2s linear infinite 1.6s;
+    }
+
+    @keyframes continuousFlow {
+      0% {
+        stroke-dashoffset: 600;
+        opacity: 0.2;
+      }
+      30% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+      }
+      100% {
+        stroke-dashoffset: 0;
+        opacity: 0.2;
+      }
+    }
+
+    /* --------------------------------------------------
+       04 • GENERAL CARDS
+    -------------------------------------------------- */
+    .card {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 32px;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #B0B0B0;
+    }
+
+    .card-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-secondary);
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .link-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-navy);
+      margin-top: 12px;
+    }
+
+    .link-arrow:hover {
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------
+       05 • CONTEXT & TOKEN COMPRESSION COMPARISON
+    -------------------------------------------------- */
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .document-box {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      background: var(--color-white);
+      padding: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+
+    .doc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--color-neutral-subtle);
+      margin-bottom: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-ink);
+    }
+
+    .doc-badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background-color: var(--color-neutral);
+      color: var(--color-secondary);
+      font-weight: 500;
+    }
+
+    .doc-body {
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    .fact-tag {
+      background-color: var(--color-navy);
+      color: var(--color-white);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+      display: inline-block;
+      margin: 2px 0;
+    }
+
+    .redundant-text {
+      color: #9CA3AF;
+      text-decoration: line-through;
+    }
+
+    /* --------------------------------------------------
+       07 • INTERACTIVE EXECUTION SYSTEM (macOS UI + Automated Cursor)
+    -------------------------------------------------- */
+    .execution-window {
+      background-color: #0E1015;
+      border: 1px solid #232732;
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+      color: #ECEFF4;
+      overflow: hidden;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .window-titlebar {
+      background-color: #161820;
+      padding: 14px 20px;
+      border-bottom: 1px solid #232732;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .window-title-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* Colored macOS Window Dots */
+    .window-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .window-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .dot-close { background-color: #FF5F56; }
+    .dot-min { background-color: #FFBD2E; }
+    .dot-max { background-color: #27C93F; }
+
+    .window-brand-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .window-logo {
+      height: 18px;
+      width: auto;
+      opacity: 0.9;
+    }
+
+    .window-title-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: #CBD5E1;
+      letter-spacing: 0.02em;
+    }
+
+    .window-controls-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .custom-select {
+      background-color: #1D212B;
+      color: #ECEFF4;
+      border: 1px solid #333948;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      outline: none;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .custom-select:focus-visible, .custom-select.active-sim {
+      border-color: #3B82F6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-exec-run {
+      background-color: #2563EB;
+      color: #FFFFFF;
+      border: none;
+      padding: 7px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-exec-run:hover:not(:disabled), .btn-exec-run.active-sim {
+      background-color: #1D4ED8;
+      transform: scale(0.98);
+    }
+
+    .btn-exec-run:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .btn-exec-reset {
+      background-color: transparent;
+      color: #94A3B8;
+      border: 1px solid #333948;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-exec-reset:hover {
+      background-color: #1D212B;
+      color: #FFFFFF;
+    }
+
+    .window-workspace {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 400px;
+    }
+
+    .workspace-pane {
+      padding: 28px;
+    }
+
+    .pane-left {
+      border-right: 1px solid #232732;
+      background-color: #11131A;
+    }
+
+    .pane-heading {
+      font-size: 12px;
+      font-weight: 600;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .task-card, .evidence-card {
+      background-color: #181B24;
+      border: 1px solid #282E3C;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .pane-right {
+      background-color: #0E1015;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stepper-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      background-color: #141720;
+      border: 1px solid #202532;
+      font-size: 13px;
+      color: #64748B;
+      transition: all 0.3s ease;
+    }
+
+    .step-item.active {
+      background-color: #1A2234;
+      border-color: #2B4C7E;
+      color: #E2E8F0;
+    }
+
+    .step-item.completed {
+      background-color: #0E221B;
+      border-color: #10B981;
+      color: #34D399;
+    }
+
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #222736;
+      font-size: 11px;
+      font-weight: 600;
+      color: inherit;
+      flex-shrink: 0;
+    }
+
+    .step-item.active .step-badge {
+      background-color: #2563EB;
+      color: #FFFFFF;
+    }
+
+    .step-item.completed .step-badge {
+      background-color: #059669;
+      color: #FFFFFF;
+    }
+
+    .output-box {
+      margin-top: auto;
+      background-color: #141822;
+      border: 1px solid #273144;
+      border-radius: 6px;
+      padding: 18px;
+      min-height: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .output-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #60A5FA;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 6px;
+    }
+
+    .output-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #F8FAFC;
+    }
+
+    /* Virtual Mouse Cursor Overlay */
+    .virtual-cursor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 26px;
+      z-index: 100;
+      pointer-events: none;
+      transition: transform 0.85s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+      opacity: 0;
+      transform: translate(600px, 300px);
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    }
+
+    .virtual-cursor.cursor-clicking svg {
+      transform: scale(0.85);
+    }
+
+    /* --------------------------------------------------
+       08 • MEASUREMENT INTERACTIVE GRAPH
+    -------------------------------------------------- */
+    .measurement-widget {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 32px;
+      margin-top: 40px;
+    }
+
+    .measurement-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--color-neutral-subtle);
+    }
+
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--color-ink);
+      cursor: pointer;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--color-navy);
+      cursor: pointer;
+    }
+
+    .chart-container {
+      margin-bottom: 24px;
+    }
+
+    .chart-svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .metric-status-callout {
+      padding: 16px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .metric-status-invalid {
+      background-color: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #991B1B;
+    }
+
+    .metric-status-valid {
+      background-color: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      color: #065F46;
+    }
+
+    .data-table-accessible {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      font-size: 13.5px;
+    }
+
+    .data-table-accessible th, .data-table-accessible td {
+      border: 1px solid var(--color-border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .data-table-accessible th {
+      background-color: var(--color-neutral);
+      font-weight: 600;
+    }
+
+    /* --------------------------------------------------
+       09 • INFRASTRUCTURE CONCEPTUAL VISUAL
+    -------------------------------------------------- */
+    .infrastructure-visual-wrap {
+      margin-top: 40px;
+      background-color: #141720;
+      border: 1px solid #242A38;
+      border-radius: 8px;
+      padding: 32px;
+    }
+
+    /* --------------------------------------------------
+       10 • PRODUCTS 2x2 EDITORIAL GRID
+    -------------------------------------------------- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .product-card {
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 36px;
+      background-color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+    }
+
+    .product-tag {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 16px;
+      align-self: flex-start;
+      background-color: var(--color-neutral);
+      color: var(--color-secondary);
+    }
+
+    .product-tag-dev {
+      background-color: #FEF3C7;
+      color: #92400E;
+    }
+
+    /* --------------------------------------------------
+       12 • DOCUMENTATION SECTION (Horizontally Scrolling Dark Cards)
+    -------------------------------------------------- */
+    .docs-section {
+      background-color: #0A0C10;
+      padding-top: var(--section-spacing);
+      padding-bottom: var(--section-spacing);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .docs-section h2, .docs-section h3 {
+      color: var(--color-white);
+    }
+
+    .docs-header-wrap {
+      margin-bottom: 44px;
+    }
+
+    /* Subtle blurred edge horizontal container */
+    .docs-scroll-wrapper {
+      position: relative;
+      width: 100%;
+      mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
+    }
+
+    .docs-scroll-track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      padding: 16px var(--gutter) 28px;
+      scrollbar-width: thin;
+      scrollbar-color: #2D3344 transparent;
+      scroll-snap-type: x mandatory;
+    }
+
+    .docs-scroll-track::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .docs-scroll-track::-webkit-scrollbar-thumb {
+      background-color: #262D3D;
+      border-radius: 3px;
+    }
+
+    /* Matte Dark Charcoal Card */
+    .doc-matte-card {
+      flex: 0 0 340px;
+      min-width: 340px;
+      background-color: #13161F;
+      border: 1px solid #232836;
+      border-radius: 10px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      scroll-snap-align: start;
+      transition: border-color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .doc-matte-card:hover {
+      border-color: #3B4459;
+      background-color: #171B26;
+      transform: translateY(-2px);
+    }
+
+    .doc-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background-color: #1A1F2C;
+      border: 1px solid #2A3245;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: #60A5FA;
+    }
+
+    .doc-matte-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 10px;
+      line-height: 1.35;
+      font-family: var(--font-primary);
+    }
+
+    .doc-matte-desc {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: #94A3B8;
+      margin-bottom: 24px;
+    }
+
+    .doc-matte-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #60A5FA;
+      margin-top: auto;
+      transition: color 0.2s ease;
+    }
+
+    .doc-matte-link:hover {
+      color: #93C5FD;
+      text-decoration: underline;
+    }
+
+    /* --------------------------------------------------
+       GLOBAL FOOTER
+    -------------------------------------------------- */
+    .global-footer {
+      background-color: #0D0E12;
+      border-top: 1px solid #1E222B;
+      color: #8C96A5;
+      padding: 80px 0 40px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+
+    .footer-col-title {
+      color: var(--color-white);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-link {
+      color: #8C96A5;
+    }
+
+    .footer-link:hover {
+      color: var(--color-white);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1C2029;
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+    }
+
+    .footer-legal-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Accessibility & Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .pulse-flow-line, .pulse-flow-line-alt, .subnav-track {
+        animation: none !important;
+      }
+      .virtual-cursor {
+        display: none !important;
+      }
+      * {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1024px) {
+      :root {
+        --gutter: 32px;
+        --section-spacing: 80px;
+      }
+      h1 { font-size: 48px; }
+      h2 { font-size: 36px; }
+      .grid-3 { grid-template-columns: 1fr; gap: 24px; }
+      .grid-2 { grid-template-columns: 1fr; gap: 24px; }
+      .product-grid { grid-template-columns: 1fr; }
+      .comparison-container { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --gutter: 20px;
+        --section-spacing: 64px;
+      }
+      h1 { font-size: 38px; line-height: 1.15; }
+      h2 { font-size: 30px; line-height: 1.25; }
+      .nav-menu, .nav-actions { display: none; }
+      .nav-menu.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background-color: var(--nav-bg);
+        padding: 24px;
+        border-bottom: 1px solid var(--nav-border);
+        gap: 16px;
+      }
+      .mobile-toggle { display: block; }
+      .window-workspace { grid-template-columns: 1fr; }
+      .pane-left { border-right: none; border-bottom: 1px solid #232732; }
+      .window-titlebar { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .window-controls-bar { width: 100%; justify-content: space-between; }
+      .doc-matte-card { flex: 0 0 280px; min-width: 280px; padding: 24px; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Focus States */
+    a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+      outline: 2px solid var(--color-navy);
+      outline-offset: 2px;
+    }
+    .section-dark a:focus-visible, .section-dark button:focus-visible {
+      outline: 2px solid #60A5FA;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==================================================
+       GLOBAL HEADER (Matte Blackish-Grey)
+  ================================================== -->
+  <header class="global-header" role="banner">
+    <div class="nav-container">
+      <a href="..index.html" class="brand-link" aria-label="DSRT AI Home">
+        <img src="/assets/dsrt-logo.png" alt="DSRT AI" class="brand-logo" onerror="this.style.display='none'">
+        <span class="brand-text">Dsrt AI</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="primary-nav-list" id="mobile-menu-btn">
+          Menu
+        </button>
+        <ul class="nav-menu" id="primary-nav-list">
+          <li><a href="/technology/index.html" class="nav-link active" aria-current="page">Technology</a></li>
+          <li><a href="..product.html" class="nav-link">Products</a></li>
+          <li><a href="..developers.html" class="nav-link">Developers</a></li>
+          <li><a href="..labs.html" class="nav-link">DSRT Labs</a></li>
+          <li><a href="..learn.html" class="nav-link">Learn</a></li>
+          <li><a href="..about.html" class="nav-link">Company</a></li>
+          <li><a href="..pricing.html" class="nav-link">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="..registration.html" class="nav-btn">Pre-register</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================================================
+       CONTINUOUS SCROLLING SUB-NAVIGATION (Pause on hover)
+  ================================================== -->
+  <nav class="subnav-bar" aria-label="Technology page sections">
+    <div class="subnav-track">
+      <!-- Group 1 -->
+      <div class="subnav-group">
+        <a href="#overview" class="subnav-link">Overview</a>
+        <a href="#foundations" class="subnav-link">Foundations</a>
+        <a href="#amplification" class="subnav-link">Amplification</a>
+        <a href="#information" class="subnav-link">Context &amp; Compression</a>
+        <a href="#execution" class="subnav-link">Execution</a>
+        <a href="#verification" class="subnav-link">Verification</a>
+        <a href="#demonstration" class="subnav-link">Execution System</a>
+        <a href="#measurement" class="subnav-link">Measurement</a>
+        <a href="#infrastructure" class="subnav-link">Infrastructure</a>
+        <a href="#products" class="subnav-link">Products</a>
+        <a href="#engineering" class="subnav-link">Development</a>
+        <a href="#resources" class="subnav-link">Resources</a>
+      </div>
+      <!-- Group 2 (Duplicate for Seamless Loop) -->
+      <div class="subnav-group" aria-hidden="true">
+        <a href="#overview" class="subnav-link">Overview</a>
+        <a href="#foundations" class="subnav-link">Foundations</a>
+        <a href="#amplification" class="subnav-link">Amplification</a>
+        <a href="#information" class="subnav-link">Context &amp; Compression</a>
+        <a href="#execution" class="subnav-link">Execution</a>
+        <a href="#verification" class="subnav-link">Verification</a>
+        <a href="#demonstration" class="subnav-link">Execution System</a>
+        <a href="#measurement" class="subnav-link">Measurement</a>
+        <a href="#infrastructure" class="subnav-link">Infrastructure</a>
+        <a href="#products" class="subnav-link">Products</a>
+        <a href="#engineering" class="subnav-link">Development</a>
+        <a href="#resources" class="subnav-link">Resources</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ==================================================
+         01 • HERO SECTION (Center Aligned)
+    ================================================== -->
+    <section class="hero-section" id="overview" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content">
+          <span class="eyebrow">TECHNOLOGY</span>
+          <h1 class="hero-title" id="hero-title">Engineering intelligence beyond the model.</h1>
+          <p class="hero-description">
+            DSRT AI develops technologies that improve how artificial intelligence systems understand information, prepare computation, execute tasks and evaluate results. Our work spans LLM amplification, context intelligence, token compression and the infrastructure required to deliver reliable software systems.
+          </p>
+          <div class="hero-actions">
+            <a href="/amplification.html" class="btn-primary">Explore LLM amplification &rarr;</a>
+            <a href="/product.html" class="btn-secondary">Explore Noitra V4 &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Inline SVG Visualization with Continuous Pulse Flow -->
+        <figure class="hero-visual-card">
+          <svg class="hero-visual-svg" viewBox="0 0 920 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+            <title id="hero-svg-title">Intelligence Processing Pipeline</title>
+            <desc id="hero-svg-desc">Four input bands converge into a central rectangular computational field and emerge as three aligned output bands with continuous pulse animation.</desc>
+            
+            <!-- Left Static Input Bands -->
+            <text x="30" y="38" fill="#555555" font-family="Lexend" font-size="12" font-weight="500">Information</text>
+            <path d="M 120 40 L 320 90" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 120 75 L 320 100" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 120 110 L 320 110" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 120 145 L 320 120" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+
+            <!-- Right Static Output Bands -->
+            <path d="M 600 90 L 800 65" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 600 105 L 800 105" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <path d="M 600 120 L 800 145" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round"/>
+            <text x="815" y="109" fill="#182D42" font-family="Lexend" font-size="12" font-weight="600">Evaluated output</text>
+
+            <!-- Continuous Looping Motion Traces -->
+            <path class="pulse-flow-line" d="M 120 75 L 320 100 L 600 100 L 800 65" stroke="#182D42" stroke-width="3.5" stroke-linecap="round"/>
+            <path class="pulse-flow-line-alt" d="M 120 110 L 320 110 L 600 105 L 800 105" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- Central Computational Field -->
+            <rect x="320" y="55" width="280" height="100" rx="6" fill="#FFFFFF" stroke="#182D42" stroke-width="2"/>
+            <text x="460" y="102" text-anchor="middle" fill="#182D42" font-family="Lexend" font-size="14" font-weight="600">Computation</text>
+            <text x="460" y="122" text-anchor="middle" fill="#64748B" font-family="Lexend" font-size="11">Transformation &amp; Synthesis</text>
+          </svg>
+          <figcaption class="hero-caption">
+            Conceptual representation of intelligence processing. No actual internal topology implied.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         02 • FOUNDATIONS SECTION
+    ================================================== -->
+    <section class="section section-bordered" id="foundations" aria-labelledby="foundations-title">
+      <div class="container">
+        <h2 id="foundations-title">Intelligence is a system-level problem.</h2>
+        <p style="max-width: 820px; margin-bottom: 48px;">
+          Model capability is only one factor in the usefulness of an AI system. The information supplied to a model, the structure of a task, the computational resources available and the criteria used to assess its output all influence the final result. DSRT AI develops technology across these dimensions.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <span class="card-number">01 / DIMENSION</span>
+            <h3>Information</h3>
+            <p>Preserve relevant evidence and instructions throughout task preparation and processing.</p>
+          </div>
+          <div class="card">
+            <span class="card-number">02 / DIMENSION</span>
+            <h3>Computation</h3>
+            <p>Allocate effort according to task requirements, avoiding uniform treatment of unequal problems.</p>
+          </div>
+          <div class="card">
+            <span class="card-number">03 / DIMENSION</span>
+            <h3>Verification</h3>
+            <p>Assess whether the resulting work meets defined requirements before declaring completion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         03 • AMPLIFICATION SECTION
+    ================================================== -->
+    <section class="section section-bordered" id="amplification" aria-labelledby="amplification-title">
+      <div class="container">
+        <div style="max-width: 880px;">
+          <span class="eyebrow">COMPUTATIONAL PROCESS</span>
+          <h2 id="amplification-title">LLM amplification.</h2>
+          <p>
+            Amplification is the engineering of the computational process surrounding a language model to improve the usefulness of its output relative to the resources consumed. It is not defined by selecting a cheaper model or shortening a prompt. Depending on the task, additional computation may be justified when it improves correctness, completeness or reliability.
+          </p>
+          <a href="/amplification.html" class="link-arrow">
+            Foundations of LLM amplification &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         04 • CONTEXT & TOKEN COMPRESSION
+    ================================================== -->
+    <section class="section section-bordered" id="information" aria-labelledby="context-title">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <span class="eyebrow">DATA INTEGRITY</span>
+            <h2 id="context-title">Information quality before computation.</h2>
+            <p>
+              Context intelligence concerns the selection, organization and preservation of information relevant to a task. A system must distinguish essential instructions, supporting evidence and irrelevant material while maintaining the relationships that give information meaning.
+            </p>
+            <p>
+              Token compression addresses a related but distinct problem: representing information more efficiently within model inputs. Compression must be assessed against semantic preservation, not token reduction alone. Some inputs, including exact quotations, identifiers and numerical evidence, may require unchanged representation.
+            </p>
+            <div style="display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap;">
+              <a href="/features.html" class="link-arrow">Context intelligence &rarr;</a>
+              <a href="/solutions/cost-optimization.html" class="link-arrow">Token compression &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Document Representation Comparison Visual -->
+          <div>
+            <div class="comparison-container" style="margin-top: 0;">
+              <div class="document-box">
+                <div class="doc-header">
+                  <span>Original representation</span>
+                  <span class="doc-badge">Raw Input</span>
+                </div>
+                <div class="doc-body">
+                  <p><span class="redundant-text">Please note that our current report clarifies that</span> <span class="fact-tag">Revenue: ₹4.8M</span> <span class="redundant-text">which represents the total for the current period.</span></p>
+                  <p><span class="redundant-text">Regarding the timeline,</span> <span class="fact-tag">Target: Q3 Close</span> <span class="redundant-text">as discussed in prior meetings.</span></p>
+                  <p><span class="fact-tag">Constraint: ISO 27001</span> <span class="redundant-text">compliance is strictly mandatory.</span></p>
+                  <p><span class="fact-tag">Lead: Enterprise Core</span> <span class="redundant-text">will take ownership.</span></p>
+                </div>
+              </div>
+
+              <div class="document-box" style="border-color: #B5C9DF; background-color: #FAFCFF;">
+                <div class="doc-header">
+                  <span>Prepared representation</span>
+                  <span class="doc-badge" style="background-color: #E2E8F0; color: var(--color-navy);">Preserved</span>
+                </div>
+                <div class="doc-body">
+                  <p><span class="fact-tag">Revenue: ₹4.8M</span></p>
+                  <p><span class="fact-tag">Target: Q3 Close</span></p>
+                  <p><span class="fact-tag">Constraint: ISO 27001</span></p>
+                  <p><span class="fact-tag">Lead: Enterprise Core</span></p>
+                </div>
+              </div>
+            </div>
+            <p class="hero-caption" style="margin-top: 14px;">
+              Conceptual representation of semantic preservation; not a measured compression result.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         05 • REASONING, EXECUTION & MEMORY
+    ================================================== -->
+    <section class="section section-bordered" id="execution" aria-labelledby="reasoning-title">
+      <div class="container">
+        <span class="eyebrow">ADAPTIVE STRATEGIES</span>
+        <h2 id="reasoning-title">Computation adapted to the task.</h2>
+        <p style="max-width: 820px; margin-bottom: 40px;">
+          Simple tasks and complex tasks do not necessarily require the same execution strategy. Task preparation can establish requirements, identify dependencies and determine whether intermediate checks are useful. Memory systems can support continuity by retaining relevant information across interactions, subject to applicable access and retention controls.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Adaptive reasoning</h3>
+            <p>Determine required computational depth and structure prior to execution.</p>
+            <a href="/approach.html" class="link-arrow">Adaptive reasoning &rarr;</a>
+          </div>
+          <div class="card">
+            <h3>Intelligence execution</h3>
+            <p>Coordinate multi-stage dependencies, parameter routing and execution paths.</p>
+            <a href="/agents.html" class="link-arrow">Intelligence execution &rarr;</a>
+          </div>
+          <div class="card">
+            <h3>Memory systems</h3>
+            <p>Preserve cross-interaction state and reference anchors with granular retention controls.</p>
+            <a href="/features.html" class="link-arrow">Memory systems &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         06 • VERIFICATION
+    ================================================== -->
+    <section class="section section-bordered" id="verification" aria-labelledby="verification-title">
+      <div class="container">
+        <div style="max-width: 880px;">
+          <span class="eyebrow">OUTPUT EVALUATION</span>
+          <h2 id="verification-title">Evaluate the work, not only the response.</h2>
+          <p>
+            A fluent response is not necessarily a correct response. Verification considers whether the output addresses the original objective, respects constraints and preserves relevant evidence. Where uncertainty remains, the system should communicate limitations rather than present an unverified result as established fact.
+          </p>
+          <a href="/security.html" class="link-arrow">Verification systems &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         07 • INTERACTIVE EXECUTION SYSTEM (macOS UI + Automated Simulated Cursor)
+    ================================================== -->
+    <section class="section section-dark" id="demonstration" aria-labelledby="exec-system-title">
+      <div class="container">
+        <span class="eyebrow eyebrow-dark">INTERACTIVE SYSTEM</span>
+        <h2 id="exec-system-title">Execution System</h2>
+        <p style="max-width: 760px;">
+          Explore how structured intelligence processes partition incoming tasks, preserve verifiable evidence, allocate computation, and assess final integrity.
+        </p>
+
+        <!-- macOS-Inspired Window with Colored Dots & Logo -->
+        <div class="execution-window" id="execution-window-container">
+          
+          <!-- Virtual Mouse Cursor Overlay -->
+          <div class="virtual-cursor" id="virtual-cursor" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 3.5L19 12L12 14L9 20.5L5.5 3.5Z" fill="#FFFFFF" stroke="#000000" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="window-titlebar">
+            <div class="window-title-left">
+              <!-- Colored macOS Window Dots -->
+              <div class="window-dots">
+                <span class="window-dot dot-close"></span>
+                <span class="window-dot dot-min"></span>
+                <span class="window-dot dot-max"></span>
+              </div>
+              
+              <div class="window-brand-title">
+                <img src="/assets/dsrt-logo.png" alt="" class="window-logo" onerror="this.style.display='none'">
+                <span class="window-title-text">Execution System</span>
+              </div>
+            </div>
+
+            <div class="window-controls-bar">
+              <label for="scenario-select" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; overflow: hidden;">Select Scenario</label>
+              <select id="scenario-select" class="custom-select" aria-label="Select execution scenario">
+                <option value="scenario-a">Scenario A: Document analysis</option>
+                <option value="scenario-b">Scenario B: Numerical reasoning</option>
+              </select>
+              <button id="btn-run-exec" class="btn-exec-run" type="button">
+                <span>Run execution</span>
+              </button>
+              <button id="btn-reset-exec" class="btn-exec-reset" type="button">
+                Reset
+              </button>
+            </div>
+          </div>
+
+          <div class="window-workspace">
+            <!-- Left Workspace: Task & Evidence -->
+            <div class="workspace-pane pane-left">
+              <div class="pane-heading">Assigned Task</div>
+              <div class="task-card" id="task-display">
+                Summarize a project update and identify the deadline.
+              </div>
+
+              <div class="pane-heading">Supplied Evidence</div>
+              <div class="evidence-card" id="evidence-display">
+                The design review is complete. The revised drawings are due on 12 December. The procurement schedule is not confirmed.
+              </div>
+            </div>
+
+            <!-- Right Workspace: Stages & Result -->
+            <div class="workspace-pane pane-right">
+              <div class="pane-heading">Execution Stages</div>
+              <div class="stepper-list" id="stepper-container">
+                <div class="step-item" id="stage-item-0">
+                  <span class="step-badge">1</span>
+                  <span class="step-text" id="stage-text-0">Identify requested summary and deadline.</span>
+                </div>
+                <div class="step-item" id="stage-item-1">
+                  <span class="step-badge">2</span>
+                  <span class="step-text" id="stage-text-1">Preserve dates and uncertainty.</span>
+                </div>
+                <div class="step-item" id="stage-item-2">
+                  <span class="step-badge">3</span>
+                  <span class="step-text" id="stage-text-2">Prepare concise response.</span>
+                </div>
+                <div class="step-item" id="stage-item-3">
+                  <span class="step-badge">4</span>
+                  <span class="step-text" id="stage-text-3">Check against supplied evidence.</span>
+                </div>
+              </div>
+
+              <div class="output-box" aria-live="polite">
+                <div class="output-label">Evaluated Outcome</div>
+                <div class="output-text" id="output-display">
+                  System ready. Select a scenario and run execution.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NoScript Fallback -->
+        <noscript>
+          <div style="background: #1A1D26; padding: 24px; border-radius: 8px; margin-top: 20px; color: #E2E8F0;">
+            <h3>Execution Reference</h3>
+            <p><strong>Scenario A (Document Analysis):</strong> Design review is complete. Revised drawings are due on 12 December. Procurement timing remains unconfirmed.</p>
+            <p><strong>Scenario B (Numerical Reasoning):</strong> ₹30,000 remains uncommitted (₹100,000 − ₹62,000 − ₹8,000). Cash expenditure alone leaves ₹38,000.</p>
+          </div>
+        </noscript>
+
+        <p class="hero-caption" style="color: #64748B; margin-top: 20px;">
+          Interactive preview of general execution principles. This interactive system does not run Noitra V4 or report measured engine performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         08 • MEASUREMENT SECTION
+    ================================================== -->
+    <section class="section section-bordered" id="measurement" aria-labelledby="measurement-title">
+      <div class="container">
+        <span class="eyebrow">METRICS &amp; VALIDATION</span>
+        <h2 id="measurement-title">Efficiency must be measured against quality.</h2>
+        <p style="max-width: 820px;">
+          A reduction in expenditure is meaningful only when the resulting work satisfies the task requirements. Evaluation should account for the complete execution cost, including preparation, model calls, verification and any additional computational overhead. Latency and task completion are separate dimensions and should be reported alongside quality.
+        </p>
+
+        <div style="display: flex; gap: 24px; margin-bottom: 32px; flex-wrap: wrap;">
+          <a href="/solutions/cost-optimization.html" class="link-arrow">Evaluation methodology &rarr;</a>
+          <a href="/pricing.html" class="link-arrow">Cost measurement &rarr;</a>
+        </div>
+
+        <!-- Interactive Stacked Cost Chart Component -->
+        <div class="measurement-widget">
+          <div class="measurement-controls">
+            <label class="checkbox-label" for="parity-checkbox">
+              <input type="checkbox" id="parity-checkbox">
+              <span>Both satisfy requirements</span>
+            </label>
+          </div>
+
+          <div class="chart-container">
+            <svg class="chart-svg" viewBox="0 0 800 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparative cost breakdown graph">
+              <!-- Grid lines & Labels -->
+              <line x1="160" y1="20" x2="160" y2="130" stroke="#E2E8F0" stroke-width="1"/>
+              <line x1="760" y1="20" x2="760" y2="130" stroke="#E2E8F0" stroke-width="1"/>
+              
+              <!-- Baseline Bar (100 cost units) -->
+              <text x="20" y="55" fill="#111111" font-family="Lexend" font-size="13" font-weight="500">Baseline</text>
+              <rect x="160" y="38" width="600" height="28" rx="4" fill="#64748B"/>
+              <text x="460" y="57" fill="#FFFFFF" font-family="Lexend" font-size="12" font-weight="500" text-anchor="middle">Model execution: 100 units</text>
+
+              <!-- Alternative Stacked Bar (8 Prep + 52 Model + 10 Verif = 70 units => 420px total) -->
+              <text x="20" y="112" fill="#111111" font-family="Lexend" font-size="13" font-weight="500">Amplified</text>
+              
+              <!-- Preparation: 8 units (48px) -->
+              <rect x="160" y="95" width="48" height="28" rx="4 0 0 4" fill="#0EA5E9"/>
+              <!-- Model execution: 52 units (312px) -->
+              <rect x="208" y="95" width="312" height="28" fill="#182D42"/>
+              <!-- Verification: 10 units (60px) -->
+              <rect x="520" y="95" width="60" height="28" rx="0 4 4 0" fill="#10B981"/>
+
+              <!-- Segment Labels -->
+              <text x="184" y="113" fill="#FFFFFF" font-family="Lexend" font-size="10" font-weight="500" text-anchor="middle">Prep: 8</text>
+              <text x="364" y="113" fill="#FFFFFF" font-family="Lexend" font-size="12" font-weight="500" text-anchor="middle">Model: 52</text>
+              <text x="550" y="113" fill="#FFFFFF" font-family="Lexend" font-size="10" font-weight="500" text-anchor="middle">Verif: 10</text>
+              
+              <!-- Total Value -->
+              <text x="590" y="113" fill="#182D42" font-family="Lexend" font-size="12" font-weight="600">Total: 70</text>
+            </svg>
+          </div>
+
+          <!-- Interactive Parity Status Banner -->
+          <div id="metric-status" class="metric-status-callout metric-status-invalid" role="status">
+            <span id="metric-status-text">Not a valid efficiency comparison — Requirement satisfaction must be verified for valid comparison.</span>
+            <span id="metric-status-calc" style="font-weight: 600;"></span>
+          </div>
+
+          <!-- Accessible Data Table Fallback -->
+          <table class="data-table-accessible">
+            <caption>Hypothetical Computational Expenditure Breakdown</caption>
+            <thead>
+              <tr>
+                <th scope="col">Execution Strategy</th>
+                <th scope="col">Preparation</th>
+                <th scope="col">Model Call</th>
+                <th scope="col">Verification</th>
+                <th scope="col">Total Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Baseline Path</th>
+                <td>0</td>
+                <td>100</td>
+                <td>0</td>
+                <td>100 units</td>
+              </tr>
+              <tr>
+                <th scope="row">Amplified Path</th>
+                <td>8</td>
+                <td>52</td>
+                <td>10</td>
+                <td>70 units</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="hero-caption" style="margin-top: 12px; text-align: left;">
+            Hypothetical values for explanation only; not DSRT AI benchmark data. Efficiency Formula: ((Baseline − Alternative) / Baseline) &times; 100.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         09 • INFRASTRUCTURE SECTION
+    ================================================== -->
+    <section class="section section-bordered" id="infrastructure" aria-labelledby="infrastructure-title">
+      <div class="container">
+        <span class="eyebrow">GOVERNANCE &amp; BOUNDARIES</span>
+        <h2 id="infrastructure-title">Infrastructure for accountable execution.</h2>
+        <p style="max-width: 820px; margin-bottom: 40px;">
+          Intelligence software must operate within defined resource, security and reliability boundaries. Execution infrastructure provides the foundation for managing workloads, handling failures and recording outcomes. These responsibilities become particularly important when software is used within organizational processes.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Reliability</h3>
+            <p>Manage failures and completion conditions systematically during complex workloads.</p>
+          </div>
+          <div class="card">
+            <h3>Accountability</h3>
+            <p>Record significant execution outcomes, lineage and evaluation checkpoints.</p>
+          </div>
+          <div class="card">
+            <h3>Resource governance</h3>
+            <p>Establish and respect computational boundaries, budgets and security scopes.</p>
+          </div>
+        </div>
+
+        <!-- Infrastructure Conceptual Visual -->
+        <div class="infrastructure-visual-wrap">
+          <svg viewBox="0 0 860 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;" role="img" aria-label="Infrastructure Boundaries Architecture">
+            <!-- Workload Box -->
+            <rect x="40" y="30" width="200" height="60" rx="6" fill="#1C202B" stroke="#33394A" stroke-width="1.5"/>
+            <text x="140" y="65" fill="#FFFFFF" font-family="Lexend" font-size="13" font-weight="500" text-anchor="middle">Workload</text>
+
+            <!-- Arrow 1 -->
+            <path d="M 240 60 L 330 60" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+
+            <!-- Execution Environment Box -->
+            <rect x="330" y="30" width="200" height="60" rx="6" fill="#1C202B" stroke="#33394A" stroke-width="1.5"/>
+            <text x="430" y="65" fill="#FFFFFF" font-family="Lexend" font-size="13" font-weight="500" text-anchor="middle">Execution environment</text>
+
+            <!-- Arrow 2 -->
+            <path d="M 530 60 L 620 60" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+
+            <!-- Outcome Record Box -->
+            <rect x="620" y="30" width="200" height="60" rx="6" fill="#1C202B" stroke="#33394A" stroke-width="1.5"/>
+            <text x="720" y="65" fill="#FFFFFF" font-family="Lexend" font-size="13" font-weight="500" text-anchor="middle">Outcome record</text>
+
+            <!-- Lower Spanning Bar -->
+            <rect x="40" y="110" width="780" height="26" rx="4" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+            <text x="430" y="127" fill="#94A3B8" font-family="Lexend" font-size="11" font-weight="500" text-anchor="middle">Resource and security boundaries</text>
+          </svg>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <a href="/security.html" class="link-arrow">Intelligence infrastructure &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         10 • PRODUCTS SECTION
+    ================================================== -->
+    <section class="section section-bordered" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <span class="eyebrow">SOFTWARE APPLICATIONS</span>
+        <h2 id="products-title">Technology applied through software.</h2>
+        <p style="max-width: 820px;">
+          DSRT AI develops software environments that apply intelligence technologies to practical work. Product capabilities and availability are documented separately.
+        </p>
+
+        <div class="product-grid">
+          <div class="product-card">
+            <div>
+              <span class="product-tag">Interactive</span>
+              <h3>DSRT Chat</h3>
+              <p>Conversational intelligence workspace designed for ongoing research, analysis and exploratory tasks.</p>
+            </div>
+            <a href="/product.html" class="link-arrow">Explore DSRT Chat &rarr;</a>
+          </div>
+
+          <div class="product-card">
+            <div>
+              <span class="product-tag">Task Execution</span>
+              <h3>Work Mode</h3>
+              <p>Amplified task execution environment built to move from unstructured requirements to rigorous final outputs.</p>
+            </div>
+            <a href="/work-mode.html" class="link-arrow">Explore Work Mode &rarr;</a>
+          </div>
+
+          <div class="product-card">
+            <div>
+              <span class="product-tag">Evaluation</span>
+              <h3>War Mode</h3>
+              <p>Comparative evaluation environment for parallel multi-model validation and competitive benchmarking.</p>
+            </div>
+            <a href="/war-mode.html" class="link-arrow">Explore War Mode &rarr;</a>
+          </div>
+
+          <div class="product-card">
+            <div>
+              <span class="product-tag product-tag-dev">In Development</span>
+              <h3>Coco</h3>
+              <p>Software engineering environment under active development, combining code synthesis with rigorous test harness verification.</p>
+            </div>
+            <a href="/product.html" class="link-arrow">Explore Coco &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         11 • ENGINEERING DEVELOPMENT
+    ================================================== -->
+    <section class="section section-bordered" id="engineering" aria-labelledby="engineering-title">
+      <div class="container">
+        <div style="max-width: 880px;">
+          <span class="eyebrow">RESEARCH &amp; ROADMAP</span>
+          <h2 id="engineering-title">Technology developed through engineering and evaluation.</h2>
+          <p>
+            DSRT AI’s amplification technology has evolved through successive generations. Noitra V4 represents the fourth-generation development programme, with emphasis on deeper task understanding, context preparation, adaptive execution and verification. Engineering development includes controlled experimentation, evaluation and refinement.
+          </p>
+
+          <div style="display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap;">
+            <a href="/product.html" class="link-arrow">Noitra V4 Programme &rarr;</a>
+            <a href="/changelog.html" class="link-arrow">Generation History &rarr;</a>
+            <a href="/labs.html" class="link-arrow">DSRT Labs &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         12 • TECHNICAL RESOURCES (Horizontally Scrolling Dark Cards)
+    ================================================== -->
+    <section class="docs-section" id="resources" aria-labelledby="resources-title">
+      <div class="container docs-header-wrap">
+        <span class="eyebrow eyebrow-dark">TECHNICAL DOCUMENTATION</span>
+        <h2 id="resources-title">Explore the technical foundations.</h2>
+        <p style="max-width: 820px; color: #94A3B8;">
+          Read through our architecture specifications, API schemas, verification methodologies and infrastructure governance.
+        </p>
+      </div>
+
+      <!-- Horizontally scrolling track with soft blurred ends -->
+      <div class="docs-scroll-wrapper">
+        <div class="docs-scroll-track" role="region" aria-label="Technical documentation modules">
+          
+          <!-- Card 1: Architecture -->
+          <div class="doc-matte-card">
+            <div>
+              <div class="doc-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="doc-matte-title">Architecture and core technology</h3>
+              <p class="doc-matte-desc">
+                Fundamental design of amplification systems, token representations and semantic preservation principles.
+              </p>
+            </div>
+            <a href="/docs/getting-started.html" class="doc-matte-link">Read Architecture &rarr;</a>
+          </div>
+
+          <!-- Card 2: Computational Systems -->
+          <div class="doc-matte-card">
+            <div>
+              <div class="doc-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="doc-matte-title">Intelligence and computational systems</h3>
+              <p class="doc-matte-desc">
+                Task preparation, dynamic routing, adaptive reasoning controllers and stateful memory architectures.
+              </p>
+            </div>
+            <a href="/docs/api.html" class="doc-matte-link">Read Computation &rarr;</a>
+          </div>
+
+          <!-- Card 3: Evaluation & Validation -->
+          <div class="doc-matte-card">
+            <div>
+              <div class="doc-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="6" x2="12" y2="12"></line>
+                  <line x1="12" y1="12" x2="16" y2="14"></line>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <h3 class="doc-matte-title">Evaluation, validation and measurement</h3>
+              <p class="doc-matte-desc">
+                Methodologies for measuring end-to-end efficiency, quality parity and automated verification checks.
+              </p>
+            </div>
+            <a href="/docs/byok.html" class="doc-matte-link">Read Evaluation &rarr;</a>
+          </div>
+
+          <!-- Card 4: Infrastructure & Security -->
+          <div class="doc-matte-card">
+            <div>
+              <div class="doc-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h3 class="doc-matte-title">Infrastructure, security and reliability</h3>
+              <p class="doc-matte-desc">
+                Execution boundary enforcement, audit logging, organizational access and governance protocols.
+              </p>
+            </div>
+            <a href="/security.html" class="doc-matte-link">Read Security &rarr;</a>
+          </div>
+
+          <!-- Card 5: API Reference -->
+          <div class="doc-matte-card">
+            <div>
+              <div class="doc-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <h3 class="doc-matte-title">API reference &amp; SDKs</h3>
+              <p class="doc-matte-desc">
+                Endpoints, authentication protocols, payload schemas and webhook integration patterns.
+              </p>
+            </div>
+            <a href="/docs/api.html" class="doc-matte-link">Browse API &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container" style="margin-top: 40px; text-align: center;">
+        <a href="/docs.html" class="btn-primary" style="background-color: #1E293B; border-color: #334155;">Browse all documentation &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================================================
+       GLOBAL FOOTER
+  ================================================== -->
+  <footer class="global-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+            <img src="/assets/dsrt-logo.png" alt="DSRT AI" style="height: 26px; width: auto;" onerror="this.style.display='none'">
+            <span style="color: #FFFFFF; font-weight: 600; font-size: 16px;">Dsrt AI</span>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #64748B;">
+            Engineering intelligence amplification, context architectures and computational execution systems for high-reliability software.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Technology</h4>
+          <ul class="footer-links">
+            <li><a href="/amplification.html" class="footer-link">LLM Amplification</a></li>
+            <li><a href="/features.html" class="footer-link">Context Systems</a></li>
+            <li><a href="/product.html" class="footer-link">Noitra V4</a></li>
+            <li><a href="/security.html" class="footer-link">Verification</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links">
+            <li><a href="/product.html" class="footer-link">DSRT Chat</a></li>
+            <li><a href="/work-mode.html" class="footer-link">Work Mode</a></li>
+            <li><a href="/war-mode.html" class="footer-link">War Mode</a></li>
+            <li><a href="/product.html" class="footer-link">Coco</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Documentation</h4>
+          <ul class="footer-links">
+            <li><a href="/docs/getting-started.html" class="footer-link">Architecture</a></li>
+            <li><a href="/docs/api.html" class="footer-link">Computation &amp; APIs</a></li>
+            <li><a href="/docs/byok.html" class="footer-link">BYOK &amp; Evaluation</a></li>
+            <li><a href="/security.html" class="footer-link">Infrastructure</a></li>
+            <li><a href="/docs.html" class="footer-link">Documentation Index</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about.html" class="footer-link">About Us</a></li>
+            <li><a href="/labs.html" class="footer-link">DSRT Labs</a></li>
+            <li><a href="/pricing.html" class="footer-link">Pricing</a></li>
+            <li><a href="/security.html" class="footer-link">Trust &amp; Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span id="year-span"></span> DSRT AI Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="/terms.html" class="footer-link">Terms of Service</a>
+          <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="/cookies.html" class="footer-link">Cookies</a>
+          <a href="/security.html" class="footer-link">Trust Center</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================================================
+       CLIENT JAVASCRIPT
+  ================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Dynamic Copyright Year
+      const yearSpan = document.getElementById('year-span');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const navList = document.getElementById('primary-nav-list');
+      if (mobileBtn && navList) {
+        mobileBtn.addEventListener('click', () => {
+          const isOpen = navList.classList.toggle('mobile-open');
+          mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+
+      /* --------------------------------------------------
+         07 • DETERMINISTIC EXECUTION SYSTEM WITH VIRTUAL CURSOR
+      -------------------------------------------------- */
+      const scenarioData = {
+        'scenario-a': {
+          task: 'Summarize a project update and identify the deadline.',
+          evidence: 'The design review is complete. The revised drawings are due on 12 December. The procurement schedule is not confirmed.',
+          stages: [
+            'Identify requested summary and deadline.',
+            'Preserve dates and uncertainty.',
+            'Prepare concise response.',
+            'Check against supplied evidence.'
+          ],
+          output: 'Design review is complete. Revised drawings are due on 12 December. Procurement timing remains unconfirmed.'
+        },
+        'scenario-b': {
+          task: 'Calculate remaining budget.',
+          evidence: 'Approved budget ₹100,000; expenditure ₹62,000; committed but unpaid ₹8,000.',
+          stages: [
+            'Distinguish spent and committed amounts.',
+            'Prepare calculation.',
+            'Calculate remaining uncommitted budget.',
+            'Check arithmetic.'
+          ],
+          output: '₹30,000 remains uncommitted (₹100,000 − ₹62,000 − ₹8,000). Cash expenditure alone leaves ₹38,000.'
+        }
+      };
+
+      const scenarioSelect = document.getElementById('scenario-select');
+      const btnRun = document.getElementById('btn-run-exec');
+      const btnReset = document.getElementById('btn-reset-exec');
+      const taskDisplay = document.getElementById('task-display');
+      const evidenceDisplay = document.getElementById('evidence-display');
+      const outputDisplay = document.getElementById('output-display');
+      const windowContainer = document.getElementById('execution-window-container');
+      const virtualCursor = document.getElementById('virtual-cursor');
+      
+      const stageItems = [
+        document.getElementById('stage-item-0'),
+        document.getElementById('stage-item-1'),
+        document.getElementById('stage-item-2'),
+        document.getElementById('stage-item-3')
+      ];
+
+      const stageTexts = [
+        document.getElementById('stage-text-0'),
+        document.getElementById('stage-text-1'),
+        document.getElementById('stage-text-2'),
+        document.getElementById('stage-text-3')
+      ];
+
+      let executionTimers = [];
+      let isRunning = false;
+      let hasAutoRun = false;
+
+      function clearTimers() {
+        executionTimers.forEach(t => clearTimeout(t));
+        executionTimers = [];
+      }
+
+      function updateScenarioView(scenarioKey) {
+        clearTimers();
+        isRunning = false;
+        if (btnRun) btnRun.disabled = false;
+
+        const data = scenarioData[scenarioKey];
+        if (!data) return;
+
+        if (taskDisplay) taskDisplay.textContent = data.task;
+        if (evidenceDisplay) evidenceDisplay.textContent = data.evidence;
+
+        stageTexts.forEach((el, idx) => {
+          if (el && data.stages[idx]) {
+            el.textContent = data.stages[idx];
+          }
+        });
+
+        resetStageStyles();
+        if (outputDisplay) {
+          outputDisplay.textContent = 'System ready. Select a scenario and run execution.';
+        }
+      }
+
+      function resetStageStyles() {
+        stageItems.forEach(item => {
+          if (item) {
+            item.classList.remove('active', 'completed');
+          }
+        });
+      }
+
+      function runExecution(callback) {
+        if (isRunning) return;
+        isRunning = true;
+        if (btnRun) btnRun.disabled = true;
+
+        clearTimers();
+        resetStageStyles();
+
+        const scenarioKey = scenarioSelect.value;
+        const data = scenarioData[scenarioKey];
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (prefersReducedMotion) {
+          stageItems.forEach(item => item && item.classList.add('completed'));
+          if (outputDisplay) outputDisplay.textContent = data.output;
+          isRunning = false;
+          if (btnRun) btnRun.disabled = false;
+          if (callback) callback();
+          return;
+        }
+
+        const stepInterval = 650;
+        data.stages.forEach((_, index) => {
+          const timer = setTimeout(() => {
+            if (index > 0 && stageItems[index - 1]) {
+              stageItems[index - 1].classList.remove('active');
+              stageItems[index - 1].classList.add('completed');
+            }
+            if (stageItems[index]) {
+              stageItems[index].classList.add('active');
+            }
+          }, index * stepInterval);
+          executionTimers.push(timer);
+        });
+
+        const finalTimer = setTimeout(() => {
+          if (stageItems[3]) {
+            stageItems[3].classList.remove('active');
+            stageItems[3].classList.add('completed');
+          }
+          if (outputDisplay) {
+            outputDisplay.textContent = data.output;
+          }
+          isRunning = false;
+          if (btnRun) btnRun.disabled = false;
+          if (callback) callback();
+        }, data.stages.length * stepInterval);
+
+        executionTimers.push(finalTimer);
+      }
+
+      // Automated Virtual Mouse Cursor Walkthrough
+      function startAutomatedWalkthrough() {
+        if (hasAutoRun || window.innerWidth < 768) return;
+        hasAutoRun = true;
+
+        const selectRect = scenarioSelect.getBoundingClientRect();
+        const runRect = btnRun.getBoundingClientRect();
+        const winRect = windowContainer.getBoundingClientRect();
+
+        const selectTargetX = (selectRect.left - winRect.left) + selectRect.width / 2;
+        const selectTargetY = (selectRect.top - winRect.top) + selectRect.height / 2;
+
+        const runTargetX = (runRect.left - winRect.left) + runRect.width / 2;
+        const runTargetY = (runRect.top - winRect.top) + runRect.height / 2;
+
+        // Position 1: Fade cursor in from bottom-center
+        virtualCursor.style.opacity = '1';
+        virtualCursor.style.transform = `translate(${winRect.width * 0.7}px, ${winRect.height * 0.7}px)`;
+
+        // Position 2: Move to Scenario Select
+        setTimeout(() => {
+          virtualCursor.style.transform = `translate(${selectTargetX}px, ${selectTargetY}px)`;
+        }, 300);
+
+        // Click Select & Switch Scenario
+        setTimeout(() => {
+          virtualCursor.classList.add('cursor-clicking');
+          scenarioSelect.classList.add('active-sim');
+          scenarioSelect.value = 'scenario-b';
+          updateScenarioView('scenario-b');
+          setTimeout(() => {
+            virtualCursor.classList.remove('cursor-clicking');
+            scenarioSelect.classList.remove('active-sim');
+          }, 350);
+        }, 1250);
+
+        // Position 3: Move to Run Execution Button
+        setTimeout(() => {
+          virtualCursor.style.transform = `translate(${runTargetX}px, ${runTargetY}px)`;
+        }, 1800);
+
+        // Click Run Button
+        setTimeout(() => {
+          virtualCursor.classList.add('cursor-clicking');
+          btnRun.classList.add('active-sim');
+          runExecution(() => {
+            setTimeout(() => {
+              virtualCursor.style.opacity = '0';
+            }, 800);
+          });
+          setTimeout(() => {
+            virtualCursor.classList.remove('cursor-clicking');
+            btnRun.classList.remove('active-sim');
+          }, 350);
+        }, 2750);
+      }
+
+      // Intersection Observer for Execution System
+      const execObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasAutoRun) {
+            setTimeout(startAutomatedWalkthrough, 400);
+          }
+        });
+      }, { threshold: 0.45 });
+
+      if (windowContainer) {
+        execObserver.observe(windowContainer);
+      }
+
+      if (scenarioSelect) {
+        scenarioSelect.addEventListener('change', (e) => {
+          virtualCursor.style.opacity = '0';
+          updateScenarioView(e.target.value);
+        });
+      }
+
+      if (btnRun) {
+        btnRun.addEventListener('click', () => {
+          virtualCursor.style.opacity = '0';
+          runExecution();
+        });
+      }
+
+      if (btnReset) {
+        btnReset.addEventListener('click', () => {
+          virtualCursor.style.opacity = '0';
+          updateScenarioView(scenarioSelect.value);
+        });
+      }
+
+      /* --------------------------------------------------
+         08 • MEASUREMENT INTERACTIVE GRAPH
+      -------------------------------------------------- */
+      const parityCheckbox = document.getElementById('parity-checkbox');
+      const metricStatus = document.getElementById('metric-status');
+      const metricStatusText = document.getElementById('metric-status-text');
+      const metricStatusCalc = document.getElementById('metric-status-calc');
+
+      function updateEfficiencyMetric() {
+        if (!parityCheckbox || !metricStatus) return;
+
+        const isChecked = parityCheckbox.checked;
+        if (isChecked) {
+          metricStatus.className = 'metric-status-callout metric-status-valid';
+          metricStatusText.textContent = 'Requirement parity verified — 30% lower expenditure across total computational lifecycle.';
+          metricStatusCalc.textContent = 'Formula: ((100 − 70) / 100) × 100 = 30%';
+        } else {
+          metricStatus.className = 'metric-status-callout metric-status-invalid';
+          metricStatusText.textContent = 'Not a valid efficiency comparison — Requirement satisfaction must be verified for valid comparison.';
+          metricStatusCalc.textContent = '';
+        }
+      }
+
+      if (parityCheckbox) {
+        parityCheckbox.addEventListener('change', updateEfficiencyMetric);
+      }
+    });
+  </script>
+</body>
+</html>
